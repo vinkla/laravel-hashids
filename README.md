@@ -1,6 +1,6 @@
 Laravel 5 Hashids
 =================
-Laravel 5 wrapper for the [Hashids API](http://hashids.org).
+Laravel 5 wrapper for the [Hashids](http://hashids.org) package.
 
 [![Build Status](https://img.shields.io/travis/vinkla/hashids/master.svg?style=flat)](https://travis-ci.org/vinkla/hashids)
 [![Latest Stable Version](http://img.shields.io/packagist/v/vinkla/hashids.svg?style=flat)](https://packagist.org/packages/vinkla/hashids)
@@ -49,4 +49,11 @@ This option `connections` is where each of the connections are setup for your ap
 
 
 ## Usage
-Documentation coming soon…
+More information coming soon…
+
+## Documentation
+There are other classes in this package that are not documented here. This is because the package is a Laravel wrapper of [@ivanakimov's Hashids package](https://github.com/ivanakimov/hashids.php).
+
+## License
+
+The Laravel Hashids package is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
