@@ -1,0 +1,36 @@
+{
+	"name": "vinkla/hashids",
+	"description": "Laravel 5 wrapper for the Hashids API.",
+	"homepage": "https://github.com/vinkla/hashids",
+	"license": "MIT",
+	"keywords": ["laravel", "hashids", "hashid", "hash", "ids", "youtube", "bitly", "encrypt", "decrypt", "obfuscate"],
+	"authors": [
+		{
+			"name": "Vincent Klaiber",
+			"email": "me@vinkla.com",
+			"homepage": "http://vinkla.com"
+		}
+	],
+	"require": {
+		"php": ">=5.4.7",
+		"illuminate/contracts": "~5.0",
+		"illuminate/support": "~5.0",
+		"graham-campbell/manager": "~2.0",
+		"hashids/hashids": "~1.0"
+	},
+	"require-dev": {
+		"graham-campbell/testbench": "~2.0"
+	},
+	"autoload": {
+		"psr-4": {
+			"Vinkla\\Hashids\\": "src/"
+		}
+	},
+	"autoload-dev": {
+		"psr-4": {
+			"Vinkla\\Tests\\Hashids\\": "tests/"
+		}
+	},
+	"minimum-stability": "dev",
+	"prefer-stable": true
+}
