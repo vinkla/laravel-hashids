@@ -13,8 +13,8 @@
 	],
 	"require": {
 		"php": ">=5.4.7",
-		"illuminate/contracts": "~5.0",
-		"illuminate/support": "~5.0",
+		"illuminate/contracts": "5.0.*",
+		"illuminate/support": "5.0.*",
 		"graham-campbell/manager": "~2.0",
 		"hashids/hashids": "~1.0"
 	},
