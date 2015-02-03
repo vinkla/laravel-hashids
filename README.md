@@ -1,6 +1,6 @@
 Laravel 5 Hashids
 =================
-Laravel 5 wrapper for the [Hashids](http://hashids.org) package.
+Laravel 5 wrapper for the [Hashids](http://hashids.org) API.
 
 [![Build Status](https://img.shields.io/travis/vinkla/hashids/master.svg?style=flat)](https://travis-ci.org/vinkla/hashids)
 [![Latest Stable Version](http://img.shields.io/packagist/v/vinkla/hashids.svg?style=flat)](https://packagist.org/packages/vinkla/hashids)
