@@ -31,6 +31,11 @@
 			"Vinkla\\Tests\\Hashids\\": "tests/"
 		}
 	},
+	"extra": {
+		"branch-alias": {
+			"dev-master": "1.0-dev"
+		}
+	},
 	"minimum-stability": "dev",
 	"prefer-stable": true
 }
