@@ -29,13 +29,13 @@ return [
 	'connections' => [
 
 		'main' => [
-			'salt' => 'your-sal-string',
+			'salt' => 'your-salt-string',
 			'length' => 'your-length-integer',
 			'alphabet' => 'your-alphabet-string'
 		],
 
 		'alternative' => [
-			'salt' => 'your-sal-string',
+			'salt' => 'your-salt-string',
 			'length' => 'your-length-integer',
 			'alphabet' => 'your-alphabet-string'
 		],
