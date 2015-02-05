@@ -10,7 +10,7 @@ Laravel 5 wrapper for the [Hashids](http://hashids.org) API.
 Require this package, with [Composer](https://getcomposer.org/), in the root directory of your project.
 
 ```bash
-composer require "vinkla/hashids=~1.0"
+composer require vinkla/hashids:~1.0
 ```
 
 Add the service provider to ```config/app.php``` in the `providers` array.
