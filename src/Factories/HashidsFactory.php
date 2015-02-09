@@ -34,10 +34,14 @@ class HashidsFactory
 	 */
 	protected function getConfig(array $config)
 	{
-		if (!array_key_exists('salt', $config) || !array_key_exists('length', $config) || !array_key_exists('alphabet', $config)) {
-			throw new \InvalidArgumentException('The Hashids client requires authentication.');
+		$keys = ['salt', 'length', 'alphabet'];
+
+		foreach($keys as $key) {
+			if (!array_key_exists($key, $config)) {
+				throw new \InvalidArgumentException('The Hashids client requires authentication.');
+			}
 		}
 
-		return array_only($config, ['salt', 'length', 'alphabet']);
+		return array_only($config, $keys);
 	}
 }
