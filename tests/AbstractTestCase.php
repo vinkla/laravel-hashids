@@ -1,9 +1,11 @@
-<?php namespace Vinkla\Tests\Hashids;
+<?php
+
+namespace Vinkla\Tests\Hashids;
 
 use GrahamCampbell\TestBench\AbstractPackageTestCase;
 
-class AbstractTestCase extends AbstractPackageTestCase {
-
+class AbstractTestCase extends AbstractPackageTestCase
+{
 	/**
 	 * Get the service provider class.
 	 *
@@ -15,5 +17,4 @@ class AbstractTestCase extends AbstractPackageTestCase {
 	{
 		return 'Vinkla\Hashids\HashidsServiceProvider';
 	}
-
 }

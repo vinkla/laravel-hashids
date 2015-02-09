@@ -1,10 +1,12 @@
-<?php namespace Vinkla\Tests\Hashids\Factories;
+<?php
+
+namespace Vinkla\Tests\Hashids\Factories;
 
 use Vinkla\Hashids\Factories\HashidsFactory;
 use Vinkla\Tests\Hashids\AbstractTestCase;
 
-class HashidsFactoryTest extends AbstractTestCase {
-
+class HashidsFactoryTest extends AbstractTestCase
+{
 	public function testMakeStandard()
 	{
 		$factory = $this->getHashidsFactory();

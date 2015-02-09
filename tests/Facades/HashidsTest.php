@@ -1,10 +1,12 @@
-<?php namespace Vinkla\Tests\Hashids\Facades;
+<?php
+
+namespace Vinkla\Tests\Hashids\Facades;
 
 use GrahamCampbell\TestBench\Traits\FacadeTestCaseTrait;
 use Vinkla\Tests\Hashids\AbstractTestCase;
 
-class HashidsTest extends AbstractTestCase {
-
+class HashidsTest extends AbstractTestCase
+{
 	use FacadeTestCaseTrait;
 
 	/**

@@ -1,11 +1,13 @@
-<?php namespace Vinkla\Hashids;
+<?php
+
+namespace Vinkla\Hashids;
 
 use GrahamCampbell\Manager\AbstractManager;
 use Illuminate\Contracts\Config\Repository;
 use Vinkla\Hashids\Factories\HashidsFactory;
 
-class HashidsManager extends AbstractManager {
-
+class HashidsManager extends AbstractManager
+{
 	/**
 	 * @var HashidsFactory
 	 */

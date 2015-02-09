@@ -1,9 +1,11 @@
-<?php namespace Vinkla\Hashids\Factories;
+<?php
+
+namespace Vinkla\Hashids\Factories;
 
 use Hashids\Hashids;
 
-class HashidsFactory {
-
+class HashidsFactory
+{
 	/**
 	 * Make a new Hashids client.
 	 *
@@ -38,5 +40,4 @@ class HashidsFactory {
 
 		return array_only($config, ['salt', 'length', 'alphabet']);
 	}
-
 }

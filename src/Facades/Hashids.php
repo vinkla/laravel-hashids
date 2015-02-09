@@ -1,9 +1,11 @@
-<?php namespace Vinkla\Hashids\Facades;
+<?php
+
+namespace Vinkla\Hashids\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
-class Hashids extends Facade {
-
+class Hashids extends Facade
+{
 	/**
 	 * Get the registered name of the component.
 	 *
@@ -13,5 +15,4 @@ class Hashids extends Facade {
 	{
 		return 'hashids';
 	}
-
 }

@@ -1,9 +1,11 @@
-<?php namespace Vinkla\Tests\Hashids;
+<?php
+
+namespace Vinkla\Tests\Hashids;
 
 use GrahamCampbell\TestBench\Traits\ServiceProviderTestCaseTrait;
 
-class ServiceProviderTest extends AbstractTestCase {
-
+class ServiceProviderTest extends AbstractTestCase
+{
 	use ServiceProviderTestCaseTrait;
 
 	public function HashidsFactoryIsInjectable()
@@ -15,5 +17,4 @@ class ServiceProviderTest extends AbstractTestCase {
 	{
 		$this->assertIsInjectable('Vinkla\Hashids\HashidsManager');
 	}
-
 }

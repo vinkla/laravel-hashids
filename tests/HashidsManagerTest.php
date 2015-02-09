@@ -1,11 +1,13 @@
-<?php namespace Vinkla\Tests\Hashids;
+<?php
+
+namespace Vinkla\Tests\Hashids;
 
 use GrahamCampbell\TestBench\AbstractTestCase as AbstractTestBenchTestCase;
 use Mockery;
 use Vinkla\Hashids\HashidsManager;
 
-class HashidsManagerTest extends AbstractTestBenchTestCase {
-
+class HashidsManagerTest extends AbstractTestBenchTestCase
+{
 	public function testCreateConnection()
 	{
 		$config = ['path' => __DIR__];
@@ -41,5 +43,4 @@ class HashidsManagerTest extends AbstractTestBenchTestCase {
 
 		return $manager;
 	}
-
 }

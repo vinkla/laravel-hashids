@@ -1,10 +1,12 @@
-<?php namespace Vinkla\Hashids;
+<?php
+
+namespace Vinkla\Hashids;
 
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Support\ServiceProvider;
 
-class HashidsServiceProvider extends ServiceProvider {
-
+class HashidsServiceProvider extends ServiceProvider
+{
 	/**
 	 * Boot the service provider.
 	 *
@@ -86,5 +88,4 @@ class HashidsServiceProvider extends ServiceProvider {
 			'hashids.factory'
 		];
 	}
-
 }
