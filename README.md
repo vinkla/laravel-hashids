@@ -1,6 +1,20 @@
 Laravel 5 Hashids
 =================
+
+![image](https://raw.githubusercontent.com/vinkla/vinkla.github.io/master/images/laravel-hashids.png)
+
 Laravel 5 wrapper for the [Hashids](http://hashids.org) API.
+
+```php
+// Encode integers.
+Hashids::encode(4815162342);
+
+// Decode strings.
+Hashids::decode('1LLb3b4ck');
+
+// Dependency injection example.
+$hashidsManager->encode(911);
+```
 
 [![Build Status](https://img.shields.io/travis/vinkla/hashids/master.svg?style=flat)](https://travis-ci.org/vinkla/hashids)
 [![Latest Stable Version](http://img.shields.io/packagist/v/vinkla/hashids.svg?style=flat)](https://packagist.org/packages/vinkla/hashids)
