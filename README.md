@@ -3,7 +3,7 @@ Laravel 5 Hashids
 
 ![image](https://raw.githubusercontent.com/vinkla/vinkla.github.io/master/images/laravel-hashids.png)
 
-Laravel 5 wrapper for the [Hashids](http://hashids.org) API.
+Laravel 5 wrapper for the [Hashids](http://hashids.org) API. [Hashids](http://hashids.org) is a small open-source library that generates short, unique, non-sequential ids from numbers.
 
 ```php
 // Encode integers.
