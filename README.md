@@ -116,7 +116,8 @@ If you prefer to use dependency injection over facades like me, then you can inj
 ```php
 use Vinkla\Hashids\HashidsManager;
 
-class Foo {
+class Foo
+{
 	protected $Hashids;
 
 	public function __construct(HashidsManager $hashids)
