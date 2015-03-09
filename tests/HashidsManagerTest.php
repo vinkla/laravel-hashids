@@ -8,39 +8,39 @@ use Vinkla\Hashids\HashidsManager;
 
 class HashidsManagerTest extends AbstractTestBenchTestCase
 {
-	public function testCreateConnection()
-	{
-		$config = ['path' => __DIR__];
+    public function testCreateConnection()
+    {
+        $config = ['path' => __DIR__];
 
-		$manager = $this->getManager($config);
+        $manager = $this->getManager($config);
 
-		$manager->getConfig()->shouldReceive('get')->once()
-			->with('hashids.default')->andReturn('hashids');
+        $manager->getConfig()->shouldReceive('get')->once()
+            ->with('hashids.default')->andReturn('hashids');
 
-		$this->assertSame([], $manager->getConnections());
+        $this->assertSame([], $manager->getConnections());
 
-		$return = $manager->connection();
+        $return = $manager->connection();
 
-		$this->assertInstanceOf('Hashids\Hashids', $return);
+        $this->assertInstanceOf('Hashids\Hashids', $return);
 
-		$this->assertArrayHasKey('hashids', $manager->getConnections());
-	}
+        $this->assertArrayHasKey('hashids', $manager->getConnections());
+    }
 
-	protected function getManager(array $config)
-	{
-		$repository = Mockery::mock('Illuminate\Contracts\Config\Repository');
-		$factory = Mockery::mock('Vinkla\Hashids\Factories\HashidsFactory');
+    protected function getManager(array $config)
+    {
+        $repository = Mockery::mock('Illuminate\Contracts\Config\Repository');
+        $factory = Mockery::mock('Vinkla\Hashids\Factories\HashidsFactory');
 
-		$manager = new HashidsManager($repository, $factory);
+        $manager = new HashidsManager($repository, $factory);
 
-		$manager->getConfig()->shouldReceive('get')->once()
-			->with('hashids.connections')->andReturn(['hashids' => $config]);
+        $manager->getConfig()->shouldReceive('get')->once()
+            ->with('hashids.connections')->andReturn(['hashids' => $config]);
 
-		$config['name'] = 'hashids';
+        $config['name'] = 'hashids';
 
-		$manager->getFactory()->shouldReceive('make')->once()
-			->with($config)->andReturn(Mockery::mock('Hashids\Hashids'));
+        $manager->getFactory()->shouldReceive('make')->once()
+            ->with($config)->andReturn(Mockery::mock('Hashids\Hashids'));
 
-		return $manager;
-	}
+        return $manager;
+    }
 }

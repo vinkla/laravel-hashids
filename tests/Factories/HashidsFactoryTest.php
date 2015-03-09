@@ -7,32 +7,31 @@ use Vinkla\Tests\Hashids\AbstractTestCase;
 
 class HashidsFactoryTest extends AbstractTestCase
 {
-	public function testMakeStandard()
-	{
-		$factory = $this->getHashidsFactory();
+    public function testMakeStandard()
+    {
+        $factory = $this->getHashidsFactory();
 
-		$return = $factory->make([
-			'salt' => 'your-sal-string',
-			'length' => 'your-length-integer',
-			'alphabet' => 'your-alphabet-string'
-		]);
+        $return = $factory->make([
+            'salt' => 'your-sal-string',
+            'length' => 'your-length-integer',
+            'alphabet' => 'your-alphabet-string'
+        ]);
 
-		$this->assertInstanceOf('Hashids\Hashids', $return);
-	}
+        $this->assertInstanceOf('Hashids\Hashids', $return);
+    }
 
-	/**
-	 * @expectedException \InvalidArgumentException
-	 */
-	public function testMakeWithoutClientId()
-	{
-		$factory = $this->getHashidsFactory();
+    /**
+     * @expectedException \InvalidArgumentException
+     */
+    public function testMakeWithoutClientId()
+    {
+        $factory = $this->getHashidsFactory();
 
-		$factory->make([]);
-	}
+        $factory->make([]);
+    }
 
-	protected function getHashidsFactory()
-	{
-		return new HashidsFactory();
-	}
-
+    protected function getHashidsFactory()
+    {
+        return new HashidsFactory();
+    }
 }

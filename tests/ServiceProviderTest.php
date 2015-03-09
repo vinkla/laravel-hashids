@@ -6,15 +6,15 @@ use GrahamCampbell\TestBench\Traits\ServiceProviderTestCaseTrait;
 
 class ServiceProviderTest extends AbstractTestCase
 {
-	use ServiceProviderTestCaseTrait;
+    use ServiceProviderTestCaseTrait;
 
-	public function HashidsFactoryIsInjectable()
-	{
-		$this->assertIsInjectable('Vinkla\Hashids\Factories\HashidsFactory');
-	}
+    public function HashidsFactoryIsInjectable()
+    {
+        $this->assertIsInjectable('Vinkla\Hashids\Factories\HashidsFactory');
+    }
 
-	public function HashidsManagerIsInjectable()
-	{
-		$this->assertIsInjectable('Vinkla\Hashids\HashidsManager');
-	}
+    public function HashidsManagerIsInjectable()
+    {
+        $this->assertIsInjectable('Vinkla\Hashids\HashidsManager');
+    }
 }
