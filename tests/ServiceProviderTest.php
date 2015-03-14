@@ -8,12 +8,12 @@ class ServiceProviderTest extends AbstractTestCase
 {
     use ServiceProviderTestCaseTrait;
 
-    public function HashidsFactoryIsInjectable()
+    public function testHashidsFactoryIsInjectable()
     {
         $this->assertIsInjectable('Vinkla\Hashids\Factories\HashidsFactory');
     }
 
-    public function HashidsManagerIsInjectable()
+    public function testHashidsManagerIsInjectable()
     {
         $this->assertIsInjectable('Vinkla\Hashids\HashidsManager');
     }
