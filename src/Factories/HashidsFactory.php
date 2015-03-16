@@ -30,7 +30,7 @@ class HashidsFactory
      *
      * @throws \InvalidArgumentException
      *
-     * @return string
+     * @return array
      */
     protected function getConfig(array $config)
     {
