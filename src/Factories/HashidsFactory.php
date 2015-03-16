@@ -38,7 +38,7 @@ class HashidsFactory
 
         foreach ($keys as $key) {
             if (!array_key_exists($key, $config)) {
-                throw new \InvalidArgumentException('The Hashids client requires authentication.');
+                throw new \InvalidArgumentException('The Hashids client requires configuration.');
             }
         }
 
