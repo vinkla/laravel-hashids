@@ -3,7 +3,7 @@ Laravel 5 Hashids
 
 ![image](https://raw.githubusercontent.com/vinkla/vinkla.github.io/master/images/laravel-hashids.png)
 
-Laravel 5 wrapper for the [Hashids](http://hashids.org) API. [Hashids](http://hashids.org) is a small open-source library that generates short, unique, non-sequential ids from numbers.
+Laravel 5 wrapper for the [Hashids](http://hashids.org) API with multiple connections. [Hashids](http://hashids.org) is a small open-source library that generates short, unique, non-sequential ids from numbers.
 
 ```php
 // Encode integers.
@@ -42,7 +42,7 @@ If you want you can use the [facade](http://laravel.com/docs/facades). Add the r
 
 #### Looking for a Laravel 4 compatible version?
 
-Please use [@mitchellvanw's Laravel 4 Hashids package](https://github.com/mitchellvanw/hashids) instead.
+Please use [Mitchell van Wijngaarden's](https://github.com/mitchellvanw) [Laravel 4 Hashids package](https://github.com/mitchellvanw/hashids) instead.
 
 ## Configuration
 
