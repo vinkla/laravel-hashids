@@ -71,7 +71,7 @@ This is the class of most interest. It is bound to the ioc container as `hashids
 
 #### Facades\Hashids
 
-This facade will dynamically pass static method calls to the `Hashids` object in the ioc container which by default is the `HashidsManager` class.
+This facade will dynamically pass static method calls to the `hashids` object in the ioc container which by default is the `HashidsManager` class.
 
 #### HashidsServiceProvider
 
