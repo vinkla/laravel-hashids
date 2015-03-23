@@ -1,14 +1,12 @@
 {
 	"name": "vinkla/hashids",
 	"description": "Laravel 5 wrapper for the Hashids API.",
-	"homepage": "https://github.com/vinkla/hashids",
 	"license": "MIT",
 	"keywords": ["laravel", "hashids", "hashid", "hash", "ids", "youtube", "bitly", "encrypt", "decrypt", "obfuscate"],
 	"authors": [
 		{
 			"name": "Vincent Klaiber",
-			"email": "hello@vinkla.com",
-			"homepage": "https://vinkla.com"
+			"email": "hello@vinkla.com"
 		}
 	],
 	"require": {
