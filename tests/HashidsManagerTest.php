@@ -1,11 +1,25 @@
 <?php
 
+/*
+ * This file is part of Laravel Hashids.
+ *
+ * (c) Vincent Klaiber <hello@vinkla.com>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
 namespace Vinkla\Tests\Hashids;
 
 use GrahamCampbell\TestBench\AbstractTestCase as AbstractTestBenchTestCase;
 use Mockery;
 use Vinkla\Hashids\HashidsManager;
 
+/**
+ * This is the Hashids manager test class.
+ *
+ * @author Vincent Klaiber <hello@vinkla.com>
+ */
 class HashidsManagerTest extends AbstractTestBenchTestCase
 {
     public function testCreateConnection()
