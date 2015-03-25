@@ -18,7 +18,7 @@ use GrahamCampbell\TestBench\AbstractPackageTestCase;
  *
  * @author Vincent Klaiber <hello@vinkla.com>
  */
-class AbstractTestCase extends AbstractPackageTestCase
+abstract class AbstractTestCase extends AbstractPackageTestCase
 {
     /**
      * Get the service provider class.
