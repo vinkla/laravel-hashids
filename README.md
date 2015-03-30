@@ -18,7 +18,7 @@ $hashidsManager->encode(911);
 
 [![Build Status](https://img.shields.io/travis/vinkla/hashids/master.svg?style=flat)](https://travis-ci.org/vinkla/hashids)
 [![StyleCI](https://styleci.io/repos/30237105/shield?style=flat)](https://styleci.io/repos/30237105)
-[![Coverage Status](http://img.shields.io/coveralls/vinkla/hashids.svg?style=flat)](https://coveralls.io/r/vinkla/hashids?branch=master)
+[![Coverage Status](https://img.shields.io/scrutinizer/g/vinkla/hashids.svg?style=flat)](https://scrutinizer-ci.com/g/vinkla/hashids?branch=master)
 [![Latest Stable Version](http://img.shields.io/packagist/v/vinkla/hashids.svg?style=flat)](https://packagist.org/packages/vinkla/hashids)
 [![License](https://img.shields.io/packagist/l/vinkla/hashids.svg?style=flat)](https://packagist.org/packages/vinkla/hashids)
 
