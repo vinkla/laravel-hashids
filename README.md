@@ -27,7 +27,7 @@ $hashidsManager->encode(911);
 Require this package, with [Composer](https://getcomposer.org/), in the root directory of your project.
 
 ```bash
-composer require vinkla/hashids:~1.0
+composer require vinkla/hashids
 ```
 
 Add the service provider to ```config/app.php``` in the `providers` array.
