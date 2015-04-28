@@ -119,7 +119,7 @@ use Vinkla\Hashids\HashidsManager;
 
 class Foo
 {
-	protected $Hashids;
+	protected $hashids;
 
 	public function __construct(HashidsManager $hashids)
 	{
