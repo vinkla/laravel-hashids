@@ -15,7 +15,7 @@ use Vinkla\Hashids\Factories\HashidsFactory;
 use Vinkla\Tests\Hashids\AbstractTestCase;
 
 /**
- * This is the Hashids factory test class.
+ * This is the hashids factory test class.
  *
  * @author Vincent Klaiber <hello@vinkla.com>
  */
@@ -26,7 +26,7 @@ class HashidsFactoryTest extends AbstractTestCase
         $factory = $this->getHashidsFactory();
 
         $return = $factory->make([
-            'salt' => 'your-sal-string',
+            'salt' => 'your-salt-string',
             'length' => 'your-length-integer',
             'alphabet' => 'your-alphabet-string'
         ]);
@@ -37,11 +37,40 @@ class HashidsFactoryTest extends AbstractTestCase
     /**
      * @expectedException \InvalidArgumentException
      */
-    public function testMakeWithoutClientId()
+    public function testMakeWithoutSalt()
     {
         $factory = $this->getHashidsFactory();
 
-        $factory->make([]);
+        $factory->make([
+            'length' => 'your-length-integer',
+            'alphabet' => 'your-alphabet-string',
+        ]);
+    }
+
+    /**
+     * @expectedException \InvalidArgumentException
+     */
+    public function testMakeWithoutLength()
+    {
+        $factory = $this->getHashidsFactory();
+
+        $factory->make([
+            'salt' => 'your-salt-string',
+            'alphabet' => 'your-alphabet-string',
+        ]);
+    }
+
+    /**
+     * @expectedException \InvalidArgumentException
+     */
+    public function testMakeWithoutAlphabet()
+    {
+        $factory = $this->getHashidsFactory();
+
+        $factory->make([
+            'salt' => 'your-salt-string',
+            'length' => 'your-length-integer',
+        ]);
     }
 
     protected function getHashidsFactory()

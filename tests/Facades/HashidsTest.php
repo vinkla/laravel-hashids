@@ -15,7 +15,7 @@ use GrahamCampbell\TestBench\Traits\FacadeTestCaseTrait;
 use Vinkla\Tests\Hashids\AbstractTestCase;
 
 /**
- * This is the Hashids facade test class.
+ * This is the hashids facade test class.
  *
  * @author Vincent Klaiber <hello@vinkla.com>
  */

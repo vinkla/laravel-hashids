@@ -16,20 +16,26 @@ use Illuminate\Contracts\Config\Repository;
 use Vinkla\Hashids\Factories\HashidsFactory;
 
 /**
- * This is the Hashids manager class.
+ * This is the hashids manager class.
  *
  * @author Vincent Klaiber <hello@vinkla.com>
  */
 class HashidsManager extends AbstractManager
 {
     /**
-     * @var HashidsFactory
+     * The factory instance.
+     *
+     * @var \Vinkla\Hashids\Factories\HashidsFactory
      */
     private $factory;
 
     /**
-     * @param Repository $config
-     * @param HashidsFactory $factory
+     * Create a new hashids manager instance.
+     *
+     * @param \Illuminate\Contracts\Config\Repository $config
+     * @param \Vinkla\Hashids\Factories\HashidsFactory $factory
+     *
+     * @return void
      */
     public function __construct(Repository $config, HashidsFactory $factory)
     {
@@ -63,7 +69,7 @@ class HashidsManager extends AbstractManager
     /**
      * Get the factory instance.
      *
-     * @return HashidsFactory
+     * @return \Vinkla\Hashids\Factories\HashidsFactory
      */
     public function getFactory()
     {

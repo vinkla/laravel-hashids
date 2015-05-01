@@ -15,7 +15,7 @@ use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Support\ServiceProvider;
 
 /**
- * This is the Hashids service provider class.
+ * This is the hashids service provider class.
  *
  * @author Vincent Klaiber <hello@vinkla.com>
  */
@@ -39,7 +39,9 @@ class HashidsServiceProvider extends ServiceProvider
     protected function setupConfig()
     {
         $source = realpath(__DIR__.'/../config/hashids.php');
+
         $this->publishes([$source => config_path('hashids.php')]);
+
         $this->mergeConfigFrom($source, 'hashids');
     }
 
@@ -66,6 +68,7 @@ class HashidsServiceProvider extends ServiceProvider
         $app->singleton('hashids.factory', function () {
             return new Factories\HashidsFactory();
         });
+
         $app->alias('hashids.factory', 'Vinkla\Hashids\Factories\HashidsFactory');
     }
 

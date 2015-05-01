@@ -14,27 +14,24 @@ namespace Vinkla\Hashids\Factories;
 use Hashids\Hashids;
 
 /**
- * This is the Hashids factory class.
+ * This is the hashids factory class.
  *
  * @author Vincent Klaiber <hello@vinkla.com>
  */
 class HashidsFactory
 {
     /**
-     * Make a new Hashids client.
+     * Make a new hashids client.
      *
      * @param array $config
-     * @return Hashids
+     *
+     * @return \Hashids\Hashids
      */
     public function make(array $config)
     {
         $config = $this->getConfig($config);
 
-        return new Hashids(
-            $config['salt'],
-            $config['length'],
-            $config['alphabet']
-        );
+        return $this->getClient($config);
     }
 
     /**
@@ -52,10 +49,26 @@ class HashidsFactory
 
         foreach ($keys as $key) {
             if (!array_key_exists($key, $config)) {
-                throw new \InvalidArgumentException('The Hashids client requires configuration.');
+                throw new \InvalidArgumentException('The hashids client requires configuration.');
             }
         }
 
         return array_only($config, $keys);
+    }
+
+    /**
+     * Get the hashids client.
+     *
+     * @param string[] $config
+     *
+     * @return \Hashids\Hashids
+     */
+    protected function getClient(array $config)
+    {
+        return new Hashids(
+            $config['salt'],
+            $config['length'],
+            $config['alphabet']
+        );
     }
 }

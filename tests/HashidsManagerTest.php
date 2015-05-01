@@ -16,7 +16,7 @@ use Mockery;
 use Vinkla\Hashids\HashidsManager;
 
 /**
- * This is the Hashids manager test class.
+ * This is the hashids manager test class.
  *
  * @author Vincent Klaiber <hello@vinkla.com>
  */
