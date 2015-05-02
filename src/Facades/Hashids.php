@@ -14,7 +14,7 @@ namespace Vinkla\Hashids\Facades;
 use Illuminate\Support\Facades\Facade;
 
 /**
- * This is the hashids facade class.
+ * This is the Hashids facade class.
  *
  * @author Vincent Klaiber <hello@vinkla.com>
  */

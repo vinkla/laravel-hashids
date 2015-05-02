@@ -14,14 +14,14 @@ namespace Vinkla\Hashids\Factories;
 use Hashids\Hashids;
 
 /**
- * This is the hashids factory class.
+ * This is the Hashids factory class.
  *
  * @author Vincent Klaiber <hello@vinkla.com>
  */
 class HashidsFactory
 {
     /**
-     * Make a new hashids client.
+     * Make a new Hashids client.
      *
      * @param array $config
      *

@@ -15,7 +15,7 @@ use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Support\ServiceProvider;
 
 /**
- * This is the hashids service provider class.
+ * This is the Hashids service provider class.
  *
  * @author Vincent Klaiber <hello@vinkla.com>
  */

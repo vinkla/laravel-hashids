@@ -16,7 +16,7 @@ use Illuminate\Contracts\Config\Repository;
 use Vinkla\Hashids\Factories\HashidsFactory;
 
 /**
- * This is the hashids manager class.
+ * This is the Hashids manager class.
  *
  * @author Vincent Klaiber <hello@vinkla.com>
  */
@@ -30,7 +30,7 @@ class HashidsManager extends AbstractManager
     private $factory;
 
     /**
-     * Create a new hashids manager instance.
+     * Create a new Hashids manager instance.
      *
      * @param \Illuminate\Contracts\Config\Repository $config
      * @param \Vinkla\Hashids\Factories\HashidsFactory $factory

@@ -15,7 +15,7 @@ use Vinkla\Hashids\Factories\HashidsFactory;
 use Vinkla\Tests\Hashids\AbstractTestCase;
 
 /**
- * This is the hashids factory test class.
+ * This is the Hashids factory test class.
  *
  * @author Vincent Klaiber <hello@vinkla.com>
  */
