@@ -1,7 +1,7 @@
 Laravel 5 Hashids
 =================
 
-![image](https://raw.githubusercontent.com/vinkla/vinkla.github.io/master/images/laravel-hashids.png)
+![laravel-hashids](https://cloud.githubusercontent.com/assets/499192/7440604/94744494-f0bf-11e4-97e9-abf75d8a43f1.png)
 
 Laravel 5 wrapper for the [Hashids](http://hashids.org) API with multiple connections. [Hashids](http://hashids.org) is a small open-source library that generates short, unique, non-sequential ids from numbers.
 
