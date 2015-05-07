@@ -100,7 +100,7 @@ class HashidsServiceProvider extends ServiceProvider
     {
         return [
             'hashids',
-            'hashids.factory'
+            'hashids.factory',
         ];
     }
 }

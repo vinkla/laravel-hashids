@@ -28,7 +28,7 @@ class HashidsFactoryTest extends AbstractTestCase
         $return = $factory->make([
             'salt' => 'your-salt-string',
             'length' => 'your-length-integer',
-            'alphabet' => 'your-alphabet-string'
+            'alphabet' => 'your-alphabet-string',
         ]);
 
         $this->assertInstanceOf('Hashids\Hashids', $return);
