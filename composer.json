@@ -10,14 +10,14 @@
 		}
 	],
 	"require": {
-		"php": ">=5.4.7",
-		"illuminate/contracts": "5.0.*",
-		"illuminate/support": "5.0.*",
-		"graham-campbell/manager": "~2.0",
+		"php": ">=5.5.9",
+		"illuminate/contracts": "5.0.*|5.1.*",
+		"illuminate/support": "5.0.*|5.1.*",
+		"graham-campbell/manager": "~2.1",
 		"hashids/hashids": "~1.0"
 	},
 	"require-dev": {
-		"graham-campbell/testbench": "~2.0"
+		"graham-campbell/testbench": "~2.1"
 	},
 	"autoload": {
 		"psr-4": {
@@ -31,7 +31,7 @@
 	},
 	"extra": {
 		"branch-alias": {
-			"dev-master": "1.0-dev"
+			"dev-master": "1.1-dev"
 		}
 	},
 	"minimum-stability": "dev",
