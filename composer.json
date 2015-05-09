@@ -1,6 +1,6 @@
 {
 	"name": "vinkla/hashids",
-	"description": "Laravel 5 wrapper for the Hashids API.",
+	"description": "A Hashids bridge for Laravel",
 	"license": "MIT",
 	"keywords": ["laravel", "hashids", "hashid", "hash", "ids", "youtube", "bitly", "encrypt", "decrypt", "obfuscate"],
 	"authors": [
