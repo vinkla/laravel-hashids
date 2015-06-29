@@ -11,9 +11,8 @@
          processIsolation="false"
          stopOnError="false"
          stopOnFailure="false"
-         syntaxCheck="true"
          verbose="true"
-        >
+>
     <testsuites>
         <testsuite name="Laravel Hashids Test Suite">
             <directory suffix="Test.php">./tests</directory>
