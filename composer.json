@@ -13,7 +13,7 @@
 		"php": ">=5.5.9",
 		"illuminate/contracts": "5.0.*|5.1.*",
 		"illuminate/support": "5.0.*|5.1.*",
-		"graham-campbell/manager": "~2.1",
+		"graham-campbell/manager": "~2.2",
 		"hashids/hashids": "~1.0"
 	},
 	"require-dev": {
