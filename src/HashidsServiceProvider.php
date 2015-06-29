@@ -40,7 +40,9 @@ class HashidsServiceProvider extends ServiceProvider
     {
         $source = realpath(__DIR__.'/../config/hashids.php');
 
-        $this->publishes([$source => config_path('hashids.php')]);
+        if (class_exists('Illuminate\Foundation\Application', false)) {
+            $this->publishes([$source => config_path('hashids.php')]);
+        }
 
         $this->mergeConfigFrom($source, 'hashids');
     }
