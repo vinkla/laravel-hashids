@@ -12,6 +12,7 @@
 namespace Vinkla\Tests\Hashids;
 
 use GrahamCampbell\TestBenchCore\ServiceProviderTrait;
+use Hashids\Hashids;
 use Vinkla\Hashids\HashidsFactory;
 use Vinkla\Hashids\HashidsManager;
 
@@ -32,5 +33,17 @@ class ServiceProviderTest extends AbstractTestCase
     public function testHashidsManagerIsInjectable()
     {
         $this->assertIsInjectable(HashidsManager::class);
+    }
+
+    public function testBindings()
+    {
+        $this->assertIsInjectable(Hashids::class);
+
+        $original = $this->app['hashids.connection'];
+        $this->app['hashids']->reconnect();
+        $new = $this->app['hashids.connection'];
+
+        $this->assertNotSame($original, $new);
+        $this->assertEquals($original, $new);
     }
 }

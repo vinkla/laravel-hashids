@@ -56,6 +56,7 @@ class HashidsServiceProvider extends ServiceProvider
     {
         $this->registerFactory($this->app);
         $this->registerManager($this->app);
+        $this->registerBindings($this->app);
     }
 
     /**
@@ -68,10 +69,10 @@ class HashidsServiceProvider extends ServiceProvider
     protected function registerFactory(Application $app)
     {
         $app->singleton('hashids.factory', function () {
-            return new \Vinkla\Hashids\HashidsFactory();
+            return new HashidsFactory();
         });
 
-        $app->alias('hashids.factory', 'Vinkla\Hashids\HashidsFactory');
+        $app->alias('hashids.factory', HashidsFactory::class);
     }
 
     /**
@@ -90,7 +91,25 @@ class HashidsServiceProvider extends ServiceProvider
             return new HashidsManager($config, $factory);
         });
 
-        $app->alias('hashids', 'Vinkla\Hashids\HashidsManager');
+        $app->alias('hashids', HashidsManager::class);
+    }
+
+    /**
+     * Register the bindings.
+     *
+     * @param \Illuminate\Contracts\Foundation\Application $app
+     *
+     * @return void
+     */
+    protected function registerBindings(Application $app)
+    {
+        $app->bind('hashids.connection', function ($app) {
+            $manager = $app['hashids'];
+
+            return $manager->connection();
+        });
+
+        $app->alias('hashids.connection', Client::class);
     }
 
     /**
@@ -103,6 +122,7 @@ class HashidsServiceProvider extends ServiceProvider
         return [
             'hashids',
             'hashids.factory',
+            'hashids.connection',
         ];
     }
 }
