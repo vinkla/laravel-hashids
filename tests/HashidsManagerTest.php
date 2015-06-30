@@ -12,7 +12,10 @@
 namespace Vinkla\Tests\Hashids;
 
 use GrahamCampbell\TestBench\AbstractTestCase as AbstractTestBenchTestCase;
+use Hashids\Hashids;
+use Illuminate\Contracts\Config\Repository;
 use Mockery;
+use Vinkla\Hashids\HashidsFactory;
 use Vinkla\Hashids\HashidsManager;
 
 /**
@@ -35,15 +38,15 @@ class HashidsManagerTest extends AbstractTestBenchTestCase
 
         $return = $manager->connection();
 
-        $this->assertInstanceOf('Hashids\Hashids', $return);
+        $this->assertInstanceOf(Hashids::class, $return);
 
         $this->assertArrayHasKey('hashids', $manager->getConnections());
     }
 
     protected function getManager(array $config)
     {
-        $repository = Mockery::mock('Illuminate\Contracts\Config\Repository');
-        $factory = Mockery::mock('Vinkla\Hashids\Factories\HashidsFactory');
+        $repository = Mockery::mock(Repository::class);
+        $factory = Mockery::mock(HashidsFactory::class);
 
         $manager = new HashidsManager($repository, $factory);
 
@@ -53,7 +56,7 @@ class HashidsManagerTest extends AbstractTestBenchTestCase
         $config['name'] = 'hashids';
 
         $manager->getFactory()->shouldReceive('make')->once()
-            ->with($config)->andReturn(Mockery::mock('Hashids\Hashids'));
+            ->with($config)->andReturn(Mockery::mock(Hashids::class));
 
         return $manager;
     }

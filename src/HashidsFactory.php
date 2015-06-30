@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace Vinkla\Hashids\Factories;
+namespace Vinkla\Hashids;
 
 use Hashids\Hashids;
 

@@ -11,7 +11,9 @@
 
 namespace Vinkla\Tests\Hashids\Facades;
 
-use GrahamCampbell\TestBench\Traits\FacadeTestCaseTrait;
+use GrahamCampbell\TestBenchCore\FacadeTrait;
+use Vinkla\Hashids\Facades\Hashids;
+use Vinkla\Hashids\HashidsManager;
 use Vinkla\Tests\Hashids\AbstractTestCase;
 
 /**
@@ -21,7 +23,7 @@ use Vinkla\Tests\Hashids\AbstractTestCase;
  */
 class HashidsTest extends AbstractTestCase
 {
-    use FacadeTestCaseTrait;
+    use FacadeTrait;
 
     /**
      * Get the facade accessor.
@@ -40,7 +42,7 @@ class HashidsTest extends AbstractTestCase
      */
     protected function getFacadeClass()
     {
-        return 'Vinkla\Hashids\Facades\Hashids';
+        return Hashids::class;
     }
 
     /**
@@ -50,6 +52,6 @@ class HashidsTest extends AbstractTestCase
      */
     protected function getFacadeRoot()
     {
-        return 'Vinkla\Hashids\HashidsManager';
+        return HashidsManager::class;
     }
 }

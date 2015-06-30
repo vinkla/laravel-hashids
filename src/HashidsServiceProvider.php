@@ -68,10 +68,10 @@ class HashidsServiceProvider extends ServiceProvider
     protected function registerFactory(Application $app)
     {
         $app->singleton('hashids.factory', function () {
-            return new Factories\HashidsFactory();
+            return new \Vinkla\Hashids\HashidsFactory();
         });
 
-        $app->alias('hashids.factory', 'Vinkla\Hashids\Factories\HashidsFactory');
+        $app->alias('hashids.factory', 'Vinkla\Hashids\HashidsFactory');
     }
 
     /**

@@ -9,10 +9,10 @@
  * file that was distributed with this source code.
  */
 
-namespace Vinkla\Tests\Hashids\Factories;
+namespace Vinkla\Tests\Hashids;
 
-use Vinkla\Hashids\Factories\HashidsFactory;
-use Vinkla\Tests\Hashids\AbstractTestCase;
+use Hashids\Hashids;
+use Vinkla\Hashids\HashidsFactory;
 
 /**
  * This is the Hashids factory test class.
@@ -31,7 +31,7 @@ class HashidsFactoryTest extends AbstractTestCase
             'alphabet' => 'your-alphabet-string',
         ]);
 
-        $this->assertInstanceOf('Hashids\Hashids', $return);
+        $this->assertInstanceOf(Hashids::class, $return);
     }
 
     /**

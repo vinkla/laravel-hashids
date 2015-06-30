@@ -13,7 +13,6 @@ namespace Vinkla\Hashids;
 
 use GrahamCampbell\Manager\AbstractManager;
 use Illuminate\Contracts\Config\Repository;
-use Vinkla\Hashids\Factories\HashidsFactory;
 
 /**
  * This is the Hashids manager class.
@@ -25,7 +24,7 @@ class HashidsManager extends AbstractManager
     /**
      * The factory instance.
      *
-     * @var \Vinkla\Hashids\Factories\HashidsFactory
+     * @var \Vinkla\Hashids\HashidsFactory
      */
     private $factory;
 
@@ -33,7 +32,7 @@ class HashidsManager extends AbstractManager
      * Create a new Hashids manager instance.
      *
      * @param \Illuminate\Contracts\Config\Repository $config
-     * @param \Vinkla\Hashids\Factories\HashidsFactory $factory
+     * @param \Vinkla\Hashids\HashidsFactory $factory
      *
      * @return void
      */
@@ -69,7 +68,7 @@ class HashidsManager extends AbstractManager
     /**
      * Get the factory instance.
      *
-     * @return \Vinkla\Hashids\Factories\HashidsFactory
+     * @return \Vinkla\Hashids\HashidsFactory
      */
     public function getFactory()
     {

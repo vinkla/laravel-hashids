@@ -11,7 +11,9 @@
 
 namespace Vinkla\Tests\Hashids;
 
-use GrahamCampbell\TestBench\Traits\ServiceProviderTestCaseTrait;
+use GrahamCampbell\TestBenchCore\ServiceProviderTrait;
+use Vinkla\Hashids\HashidsFactory;
+use Vinkla\Hashids\HashidsManager;
 
 /**
  * This is the service provider test class.
@@ -20,15 +22,15 @@ use GrahamCampbell\TestBench\Traits\ServiceProviderTestCaseTrait;
  */
 class ServiceProviderTest extends AbstractTestCase
 {
-    use ServiceProviderTestCaseTrait;
+    use ServiceProviderTrait;
 
     public function testHashidsFactoryIsInjectable()
     {
-        $this->assertIsInjectable('Vinkla\Hashids\Factories\HashidsFactory');
+        $this->assertIsInjectable(HashidsFactory::class);
     }
 
     public function testHashidsManagerIsInjectable()
     {
-        $this->assertIsInjectable('Vinkla\Hashids\HashidsManager');
+        $this->assertIsInjectable(HashidsManager::class);
     }
 }

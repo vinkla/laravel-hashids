@@ -12,6 +12,7 @@
 namespace Vinkla\Tests\Hashids;
 
 use GrahamCampbell\TestBench\AbstractPackageTestCase;
+use Vinkla\Hashids\HashidsServiceProvider;
 
 /**
  * This is the abstract test class.
@@ -29,6 +30,6 @@ abstract class AbstractTestCase extends AbstractPackageTestCase
      */
     protected function getServiceProviderClass($app)
     {
-        return 'Vinkla\Hashids\HashidsServiceProvider';
+        return HashidsServiceProvider::class;
     }
 }
