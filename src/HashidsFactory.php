@@ -37,7 +37,7 @@ class HashidsFactory
     /**
      * Get the configuration data.
      *
-     * @param string[] $config
+     * @param array $config
      *
      * @throws \InvalidArgumentException
      *
@@ -45,30 +45,22 @@ class HashidsFactory
      */
     protected function getConfig(array $config)
     {
-        $keys = ['salt', 'length', 'alphabet'];
-
-        foreach ($keys as $key) {
-            if (!array_key_exists($key, $config)) {
-                throw new \InvalidArgumentException('The hashids client requires configuration.');
-            }
-        }
-
-        return array_only($config, $keys);
+        return [
+            'config'   => array_get($config, 'salt', ''),
+            'length'   => array_get($config, 'length', 0),
+            'alphabet' => array_get($config, 'alphabet', ''),
+        ];
     }
 
     /**
      * Get the hashids client.
      *
-     * @param string[] $config
+     * @param array $config
      *
      * @return \Hashids\Hashids
      */
     protected function getClient(array $config)
     {
-        return new Hashids(
-            $config['salt'],
-            $config['length'],
-            $config['alphabet']
-        );
+        return new Hashids($config['salt'], $config['length'], $config['alphabet']);
     }
 }
