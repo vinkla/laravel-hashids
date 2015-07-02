@@ -34,45 +34,6 @@ class HashidsFactoryTest extends AbstractTestCase
         $this->assertInstanceOf(Hashids::class, $return);
     }
 
-    /**
-     * @expectedException \InvalidArgumentException
-     */
-    public function testMakeWithoutSalt()
-    {
-        $factory = $this->getHashidsFactory();
-
-        $factory->make([
-            'length' => 'your-length-integer',
-            'alphabet' => 'your-alphabet-string',
-        ]);
-    }
-
-    /**
-     * @expectedException \InvalidArgumentException
-     */
-    public function testMakeWithoutLength()
-    {
-        $factory = $this->getHashidsFactory();
-
-        $factory->make([
-            'salt' => 'your-salt-string',
-            'alphabet' => 'your-alphabet-string',
-        ]);
-    }
-
-    /**
-     * @expectedException \InvalidArgumentException
-     */
-    public function testMakeWithoutAlphabet()
-    {
-        $factory = $this->getHashidsFactory();
-
-        $factory->make([
-            'salt' => 'your-salt-string',
-            'length' => 'your-length-integer',
-        ]);
-    }
-
     protected function getHashidsFactory()
     {
         return new HashidsFactory();

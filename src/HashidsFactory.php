@@ -46,8 +46,8 @@ class HashidsFactory
     protected function getConfig(array $config)
     {
         return [
-            'config'   => array_get($config, 'salt', ''),
-            'length'   => array_get($config, 'length', 0),
+            'salt' => array_get($config, 'salt', ''),
+            'length' => array_get($config, 'length', 0),
             'alphabet' => array_get($config, 'alphabet', ''),
         ];
     }
