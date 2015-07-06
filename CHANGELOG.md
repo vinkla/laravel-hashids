@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 2.0.1 (released 2015-07-06)
+
+- Don't require configuration
+
 ## 2.0.0 (released 2015-06-30)
 
 - Official Lumen support
