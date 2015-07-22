@@ -1,5 +1,5 @@
-Laravel 5 Hashids
-=================
+Laravel Hashids
+===============
 
 ![laravel-hashids](https://cloud.githubusercontent.com/assets/499192/7440604/94744494-f0bf-11e4-97e9-abf75d8a43f1.png)
 
