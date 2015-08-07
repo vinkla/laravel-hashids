@@ -1,44 +1,44 @@
 {
-	"name": "vinkla/hashids",
-	"description": "A Hashids bridge for Laravel",
-	"license": "MIT",
-	"keywords": ["laravel", "hashids", "hashid", "hash", "ids", "youtube", "bitly", "encrypt", "decrypt", "obfuscate"],
-	"authors": [
-		{
-			"name": "Vincent Klaiber",
-			"email": "hello@vinkla.com"
-		}
-	],
-	"require": {
-		"php": ">=5.5.9",
-		"illuminate/contracts": "5.0.*|5.1.*",
-		"illuminate/support": "5.0.*|5.1.*",
-		"graham-campbell/manager": "~2.2",
-		"hashids/hashids": "~1.0"
-	},
-	"require-dev": {
-		"graham-campbell/testbench": "~3.0",
+    "name": "vinkla/hashids",
+    "description": "A Hashids bridge for Laravel",
+    "license": "MIT",
+    "keywords": ["laravel", "hashids", "hashid", "hash", "ids", "youtube", "bitly", "encrypt", "decrypt", "obfuscate"],
+    "authors": [
+        {
+            "name": "Vincent Klaiber",
+            "email": "hello@vinkla.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.5.9",
+        "illuminate/contracts": "5.0.*|5.1.*",
+        "illuminate/support": "5.0.*|5.1.*",
+        "graham-campbell/manager": "~2.2",
+        "hashids/hashids": "~1.0"
+    },
+    "require-dev": {
+        "graham-campbell/testbench": "~3.0",
         "mockery/mockery": "^0.9.4",
         "phpunit/phpunit": "^4.7.6"
-	},
-	"autoload": {
-		"psr-4": {
-			"Vinkla\\Hashids\\": "src/"
-		}
-	},
-	"autoload-dev": {
-		"psr-4": {
-			"Vinkla\\Tests\\Hashids\\": "tests/"
-		}
-	},
-	"config": {
-	    "preferred-install": "dist"
-	},
-	"extra": {
-		"branch-alias": {
-			"dev-master": "2.0-dev"
-		}
-	},
-	"minimum-stability": "dev",
-	"prefer-stable": true
+    },
+    "autoload": {
+        "psr-4": {
+            "Vinkla\\Hashids\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Vinkla\\Tests\\Hashids\\": "tests/"
+        }
+    },
+    "config": {
+        "preferred-install": "dist"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "2.0-dev"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }
