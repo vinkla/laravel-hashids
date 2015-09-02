@@ -40,13 +40,13 @@ return [
         'main' => [
             'salt' => env('HASHIDS_MAIN_SALT', 'your-salt-string'),
             'length' => env('HASHIDS_MAIN_LENGTH', 'your-length-integer'),
-            'alphabet' => env('HASHIDS_MAIN_ALPHABET', 'your-alphabet-string')
+            'alphabet' => env('HASHIDS_MAIN_ALPHABET', 'your-alphabet-string'),
         ],
 
         'alternative' => [
             'salt' => env('HASHIDS_ALT_SALT', 'your-salt-string'),
             'length' => env('HASHIDS_ALT_LENGTH', 'your-length-integer'),
-            'alphabet' => env('HASHIDS_ALT_ALPHABET', 'your-alphabet-string')
+            'alphabet' => env('HASHIDS_ALT_ALPHABET', 'your-alphabet-string'),
         ],
 
     ],
