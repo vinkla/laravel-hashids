@@ -22,7 +22,7 @@ return [
     |
     */
 
-    'default' => env('HASHIDS_DEFAULT_CONNECTION', main'),
+    'default' => env('HASHIDS_DEFAULT_CONNECTION', 'main'),
 
     /*
     |--------------------------------------------------------------------------
