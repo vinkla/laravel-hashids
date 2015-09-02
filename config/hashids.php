@@ -44,8 +44,8 @@ return [
         ],
 
         'alternative' => [
-            'salt' => env('HASHIDS_ALT_ALPHABET', 'your-salt-string'),
-            'length' => env('HASHIDS_ALT_ALPHABET', 'your-length-integer'),
+            'salt' => env('HASHIDS_ALT_SALT', 'your-salt-string'),
+            'length' => env('HASHIDS_ALT_LENGTH', 'your-length-integer'),
             'alphabet' => env('HASHIDS_ALT_ALPHABET', 'your-alphabet-string')
         ],
 
