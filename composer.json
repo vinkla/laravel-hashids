@@ -31,9 +31,6 @@
             "Vinkla\\Tests\\Hashids\\": "tests/"
         }
     },
-    "config": {
-        "preferred-install": "dist"
-    },
     "extra": {
         "branch-alias": {
             "dev-master": "2.0-dev"
