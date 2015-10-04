@@ -32,13 +32,13 @@ composer require vinkla/hashids
 Add the service provider to ```config/app.php``` in the `providers` array.
 
 ```php
-'Vinkla\Hashids\HashidsServiceProvider'
+Vinkla\Hashids\HashidsServiceProvider::class
 ```
 
 If you want you can use the [facade](http://laravel.com/docs/facades). Add the reference in ```config/app.php``` to your aliases array.
 
 ```php
-'Hashids' => 'Vinkla\Hashids\Facades\Hashids'
+'Hashids' => Vinkla\Hashids\Facades\Hashids::class
 ```
 
 #### Looking for a Laravel 4 compatible version?
