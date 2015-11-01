@@ -11,15 +11,15 @@
     ],
     "require": {
         "php": ">=5.5.9",
-        "illuminate/contracts": "5.0.*|5.1.*",
-        "illuminate/support": "5.0.*|5.1.*",
-        "graham-campbell/manager": "~2.2",
-        "hashids/hashids": "~1.0"
+        "illuminate/contracts": "5.0.* || 5.1.*",
+        "illuminate/support": "5.0.* || 5.1.*",
+        "graham-campbell/manager": "^2.2",
+        "hashids/hashids": "^1.0"
     },
     "require-dev": {
-        "graham-campbell/testbench": "~3.0",
+        "graham-campbell/testbench": "^3.0",
         "mockery/mockery": "^0.9.4",
-        "phpunit/phpunit": "^4.8|^5.0"
+        "phpunit/phpunit": "^4.8 || ^5.0"
     },
     "autoload": {
         "psr-4": {
