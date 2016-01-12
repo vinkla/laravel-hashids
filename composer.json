@@ -10,7 +10,7 @@
         }
     ],
     "require": {
-        "php": ">=5.5.9",
+        "php": "^5.5.9 || ^7.0",
         "illuminate/contracts": "5.1.* || 5.2.*",
         "illuminate/support": "5.1.* || 5.2.*",
         "graham-campbell/manager": "^2.3",
