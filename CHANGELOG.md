@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 2.2.2 (released 2016-01-30)
+
+- Improved service provider
+
 ## 2.2.1 (released 2016-01-17)
 
 - Lumen 5.2 support

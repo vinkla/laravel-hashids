@@ -12,7 +12,7 @@
 namespace Vinkla\Hashids;
 
 use Hashids\Hashids;
-use Illuminate\Contracts\Container\Container as Application;
+use Illuminate\Contracts\Container\Container;
 use Illuminate\Foundation\Application as LaravelApplication;
 use Illuminate\Support\ServiceProvider;
 use Laravel\Lumen\Application as LumenApplication;
@@ -59,62 +59,56 @@ class HashidsServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->registerFactory($this->app);
-        $this->registerManager($this->app);
-        $this->registerBindings($this->app);
+        $this->registerFactory();
+        $this->registerManager();
+        $this->registerBindings();
     }
 
     /**
      * Register the factory class.
      *
-     * @param \Illuminate\Contracts\Container\Container $app
-     *
      * @return void
      */
-    protected function registerFactory(Application $app)
+    protected function registerFactory()
     {
-        $app->singleton('hashids.factory', function () {
+        $this->app->singleton('hashids.factory', function () {
             return new HashidsFactory();
         });
 
-        $app->alias('hashids.factory', HashidsFactory::class);
+        $this->app->alias('hashids.factory', HashidsFactory::class);
     }
 
     /**
      * Register the manager class.
      *
-     * @param \Illuminate\Contracts\Container\Container $app
-     *
      * @return void
      */
-    protected function registerManager(Application $app)
+    protected function registerManager()
     {
-        $app->singleton('hashids', function ($app) {
+        $this->app->singleton('hashids', function (Container $app) {
             $config = $app['config'];
             $factory = $app['hashids.factory'];
 
             return new HashidsManager($config, $factory);
         });
 
-        $app->alias('hashids', HashidsManager::class);
+        $this->app->alias('hashids', HashidsManager::class);
     }
 
     /**
      * Register the bindings.
      *
-     * @param \Illuminate\Contracts\Container\Container $app
-     *
      * @return void
      */
-    protected function registerBindings(Application $app)
+    protected function registerBindings()
     {
-        $app->bind('hashids.connection', function ($app) {
+        $this->app->bind('hashids.connection', function (Container $app) {
             $manager = $app['hashids'];
 
             return $manager->connection();
         });
 
-        $app->alias('hashids.connection', Hashids::class);
+        $this->app->alias('hashids.connection', Hashids::class);
     }
 
     /**
