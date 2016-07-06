@@ -18,7 +18,7 @@
     },
     "require-dev": {
         "graham-campbell/testbench": "^3.1",
-        "mockery/mockery": "^0.9.4",
+        "mockery/mockery": "^0.9.5",
         "phpunit/phpunit": "^5.4"
     },
     "autoload": {
