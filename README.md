@@ -42,10 +42,6 @@ If you want you can use the [facade](http://laravel.com/docs/facades). Add the r
 'Hashids' => Vinkla\Hashids\Facades\Hashids::class
 ```
 
-#### Looking for a Laravel 4 compatible version?
-
-Please use [Mitchell van Wijngaarden's](https://github.com/mitchellvanw) [Laravel 4 Hashids package](https://github.com/mitchellvanw/hashids) instead.
-
 ## Configuration
 
 Laravel Hashids requires connection configuration. To get started, you'll need to publish all vendor assets:
