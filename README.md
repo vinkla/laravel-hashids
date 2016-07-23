@@ -16,7 +16,7 @@ Hashids::decode('1LLb3b4ck');
 $hashidsManager->encode(911);
 ```
 
-[![Build Status](https://img.shields.io/travis/vinkla/hashids/master.svg?style=flat)](https://travis-ci.org/vinkla/hashids)
+[![Build Status](https://img.shields.io/travis/vinkla/laravel-hashids/master.svg?style=flat)](https://travis-ci.org/vinkla/laravel-hashids)
 [![StyleCI](https://styleci.io/repos/30237105/shield?style=flat)](https://styleci.io/repos/30237105)
 [![Coverage Status](https://img.shields.io/scrutinizer/coverage/g/vinkla/hashids.svg?style=flat)](https://scrutinizer-ci.com/g/vinkla/hashids/code-structure)
 [![Quality Score](https://img.shields.io/scrutinizer/g/vinkla/hashids.svg?style=flat)](https://scrutinizer-ci.com/g/vinkla/hashids)
