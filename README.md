@@ -27,7 +27,7 @@ $hashidsManager->encode(911);
 Require this package, with [Composer](https://getcomposer.org/), in the root directory of your project.
 
 ```bash
-composer require vinkla/hashids
+$ composer require vinkla/hashids
 ```
 
 Add the service provider to `config/app.php` in the `providers` array.
@@ -47,7 +47,7 @@ If you want you can use the [facade](http://laravel.com/docs/facades). Add the r
 Laravel Hashids requires connection configuration. To get started, you'll need to publish all vendor assets:
 
 ```bash
-php artisan vendor:publish
+$ php artisan vendor:publish
 ```
 
 This will create a `config/hashids.php` file in your app that you can modify to set your configuration. Also, make sure you check for changes to the original config file in this package between releases.
