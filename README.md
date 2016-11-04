@@ -1,9 +1,8 @@
-Laravel Hashids
-===============
+# Laravel Hashids
 
 ![hashids](https://cloud.githubusercontent.com/assets/499192/11159205/faa429ae-8a5d-11e5-8c5d-c60a89290c5e.png)
 
-Laravel 5 wrapper for the [Hashids](http://hashids.org) API with multiple connections. [Hashids](http://hashids.org) is a small open-source library that generates short, unique, non-sequential ids from numbers.
+> A [Hashids](http://hashids.org) bridge for Laravel.
 
 ```php
 // Encode integers.
@@ -18,12 +17,12 @@ $hashidsManager->encode(911);
 
 [![Build Status](https://img.shields.io/travis/vinkla/laravel-hashids/master.svg?style=flat)](https://travis-ci.org/vinkla/laravel-hashids)
 [![StyleCI](https://styleci.io/repos/30237105/shield?style=flat)](https://styleci.io/repos/30237105)
-[![Coverage Status](https://img.shields.io/scrutinizer/coverage/g/vinkla/hashids.svg?style=flat)](https://scrutinizer-ci.com/g/vinkla/hashids/code-structure)
-[![Quality Score](https://img.shields.io/scrutinizer/g/vinkla/hashids.svg?style=flat)](https://scrutinizer-ci.com/g/vinkla/hashids)
+[![Coverage Status](https://img.shields.io/codecov/c/github/vinkla/laravel-hashids.svg?style=flat)](https://codecov.io/github/vinkla/laravel-hashids)
 [![Latest Version](https://img.shields.io/github/release/vinkla/hashids.svg?style=flat)](https://github.com/vinkla/hashids/releases)
 [![License](https://img.shields.io/packagist/l/vinkla/hashids.svg?style=flat)](https://packagist.org/packages/vinkla/hashids)
 
 ## Installation
+
 Require this package, with [Composer](https://getcomposer.org/), in the root directory of your project.
 
 ```bash
@@ -134,8 +133,9 @@ App::make('Foo')->bar();
 ```
 
 ## Documentation
+
 There are other classes in this package that are not documented here. This is because the package is a Laravel wrapper of [Ivan Akimov's](https://github.com/ivanakimov) [Hashids package](https://github.com/ivanakimov/hashids.php).
 
 ## License
 
-Laravel Hashids is licensed under [The MIT License (MIT)](LICENSE).
+[MIT](LICENSE) © [Vincent Klaiber](https://vinkla.com)
