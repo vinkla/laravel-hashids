@@ -11,8 +11,8 @@ install:
   - travis_retry composer install --no-interaction
 
 script:
-  - if [ "$TRAVIS_PHP_VERSION" != "5.6" ]; then vendor/bin/phpunit; fi
-  - if [ "$TRAVIS_PHP_VERSION" == "5.6" ]; then vendor/bin/phpunit --coverage-clover clover.xml; fi
+  - vendor/bin/phpunit
+  - vendor/bin/phpunit --coverage-clover clover.xml
 
 after_script:
-  - if [ "$TRAVIS_PHP_VERSION" == "5.6" ]; then bash <(curl -s https://codecov.io/bash); fi
+  - bash <(curl -s https://codecov.io/bash)
