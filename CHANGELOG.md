@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 3.0.0 (released 2016-11-15)
+
+- Updated to hashids 2.0
+
 ## 2.4.0 (released 2016-07-11)
 
 - Dropped php 5.5 support
