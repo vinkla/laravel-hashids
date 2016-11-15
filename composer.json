@@ -15,7 +15,7 @@
         "illuminate/contracts": "5.2.* || 5.3.*",
         "illuminate/support": "5.2.* || 5.3.*",
         "graham-campbell/manager": "^2.4",
-        "hashids/hashids": "^1.0"
+        "hashids/hashids": "^2.0"
     },
     "require-dev": {
         "graham-campbell/testbench": "^3.2",
@@ -37,7 +37,7 @@
     },
     "extra": {
         "branch-alias": {
-            "dev-master": "2.4-dev"
+            "dev-master": "3.0-dev"
         }
     },
     "minimum-stability": "dev",
