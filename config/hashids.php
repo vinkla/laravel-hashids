@@ -22,7 +22,7 @@ return [
     |
     */
 
-    'default' => 'main',
+    'default' => env('HASHIDS_DEFAULT_CONNECTION', 'main'),
 
     /*
     |--------------------------------------------------------------------------
@@ -38,15 +38,15 @@ return [
     'connections' => [
 
         'main' => [
-            'salt' => 'your-salt-string',
-            'length' => 'your-length-integer',
-            'alphabet' => 'your-alphabet-string',
+            'salt' => env('HASHIDS_MAIN_SALT', 'your-salt-string'),
+            'length' => env('HASHIDS_MAIN_LENGTH', 'your-length-integer'),
+            'alphabet' => env('HASHIDS_MAIN_ALPHABET', 'your-alphabet-string'),
         ],
 
         'alternative' => [
-            'salt' => 'your-salt-string',
-            'length' => 'your-length-integer',
-            'alphabet' => 'your-alphabet-string',
+            'salt' => env('HASHIDS_ALT_SALT', 'your-salt-string'),
+            'length' => env('HASHIDS_ALT_LENGTH', 'your-length-integer'),
+            'alphabet' => env('HASHIDS_ALT_ALPHABET', 'your-alphabet-string'),
         ],
 
     ],
