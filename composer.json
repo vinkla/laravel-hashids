@@ -15,7 +15,7 @@
         "illuminate/contracts": "5.3.* || 5.4.*",
         "illuminate/support": "5.3.* || 5.4.*",
         "graham-campbell/manager": "^2.4",
-        "hashids/hashids": "^2.0"
+        "hashids/hashids": "^2.1"
     },
     "require-dev": {
         "graham-campbell/testbench": "^3.3",
