@@ -40,13 +40,11 @@ return [
         'main' => [
             'salt' => 'your-salt-string',
             'length' => 'your-length-integer',
-            'alphabet' => 'your-alphabet-string',
         ],
 
         'alternative' => [
             'salt' => 'your-salt-string',
             'length' => 'your-length-integer',
-            'alphabet' => 'your-alphabet-string',
         ],
 
     ],
