@@ -14,7 +14,7 @@
         "php": "^5.6.4 || ^7.0",
         "illuminate/contracts": "5.3.* || 5.4.*",
         "illuminate/support": "5.3.* || 5.4.*",
-        "graham-campbell/manager": "^2.4",
+        "graham-campbell/manager": "^2.5",
         "hashids/hashids": "^2.0"
     },
     "require-dev": {
