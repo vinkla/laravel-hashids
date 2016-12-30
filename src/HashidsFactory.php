@@ -48,7 +48,7 @@ class HashidsFactory
         return [
             'salt' => array_get($config, 'salt', ''),
             'length' => array_get($config, 'length', 0),
-            'alphabet' => array_get($config, 'alphabet', ''),
+            'alphabet' => array_get($config, 'alphabet', 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890'),
         ];
     }
 
