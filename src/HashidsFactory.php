@@ -9,6 +9,8 @@
  * file that was distributed with this source code.
  */
 
+declare(strict_types=1);
+
 namespace Vinkla\Hashids;
 
 use Hashids\Hashids;
@@ -27,7 +29,7 @@ class HashidsFactory
      *
      * @return \Hashids\Hashids
      */
-    public function make(array $config)
+    public function make(array $config): Hashids
     {
         $config = $this->getConfig($config);
 
@@ -43,7 +45,7 @@ class HashidsFactory
      *
      * @return array
      */
-    protected function getConfig(array $config)
+    protected function getConfig(array $config): array
     {
         return [
             'salt' => array_get($config, 'salt', ''),
@@ -59,7 +61,7 @@ class HashidsFactory
      *
      * @return \Hashids\Hashids
      */
-    protected function getClient(array $config)
+    protected function getClient(array $config): Hashids
     {
         return new Hashids($config['salt'], $config['length'], $config['alphabet']);
     }
