@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 3.1.0 (released 2017-01-01)
+
+- Added laravel 5.4 support
+- Dropped php 5.6 support
+
 ## 3.0.0 (released 2016-11-15)
 
 - Updated to hashids 2.0
