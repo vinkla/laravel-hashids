@@ -40,7 +40,7 @@ return [
     'connections' => [
 
         'main' => [
-            'salt' => 'your-salt-string',
+            'salt' => env('APP_KEY', 'your-salt-string'),
             'length' => 'your-length-integer',
         ],
 
