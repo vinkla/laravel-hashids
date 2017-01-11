@@ -38,7 +38,7 @@ Vinkla\Hashids\HashidsServiceProvider::class
 If you want you can use the [facade](http://laravel.com/docs/facades). Add the reference in `config/app.php` to your aliases array.
 
 ```php
-'Hashids' => Vinkla\Hashids\Facades\Hashids::class
+'Hashids' => 'Vinkla\Hashids\Facades\Hashids::class'
 ```
 
 ## Configuration
