@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-declare(strict_types=1);
+declare (strict_types = 1);
 
 return [
 
@@ -22,9 +22,9 @@ return [
     | your default connection for all work. Of course, you may use many
     | connections at once using the manager class.
     |
-    */
+     */
 
-    'default' => 'main',
+    'default'     => 'main',
 
     /*
     |--------------------------------------------------------------------------
@@ -35,17 +35,17 @@ return [
     | configuration has been included, but you may add as many connections as
     | you would like.
     |
-    */
+     */
 
     'connections' => [
 
-        'main' => [
-            'salt' => 'your-salt-string',
-            'length' => 'your-length-integer',
+        'main'        => [
+            'salt'   => env('HASHIDS_SALT', 'your-salt-string'),
+            'length' => env('HASHIDS_LENGTH', 'your-length-integer'),
         ],
 
         'alternative' => [
-            'salt' => 'your-salt-string',
+            'salt'   => 'your-salt-string',
             'length' => 'your-length-integer',
         ],
 
