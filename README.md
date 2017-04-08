@@ -74,6 +74,18 @@ This facade will dynamically pass static method calls to the `hashids` object in
 
 This class contains no public methods of interest. This class should be added to the providers array in `config/app.php`. This class will setup ioc bindings.
 
+#### Eloquent\HasHashid
+
+An interface to add to your Eloquent models from which you can get a hashid.
+It describes a `getHashidAttribute` method, accessible (via Eloquent's dynamic property resolution) as `$model->hashid`, and two static methods `findHashid` and `findHashidOrFail`.
+The find methods take a `$hashid` parameter and by default except this hashid to encode a single integer.
+If you instead want to handle hashids which encode multiple integers, you can pass `true` as the second parameter to either of these methods.
+
+#### Eloquent\HashidTrait
+
+This trait is an implementation of the `HasHashid` interface for Eloquent models.
+It uses the main connection to encode and decode hashids in the context of a given model.
+
 ### Examples
 Here you can see an example of just how simple this package is to use. Out of the box, the default adapter is `main`. After you enter your authentication details in the config file, it will just work:
 
@@ -131,6 +143,30 @@ class Foo
 
 App::make('Foo')->bar();
 ```
+
+### Usage with Eloquent models
+
+If you want to add a hashid getter to an Eloquent model, one way is to use the provided interface and trait.
+Once added, your model may begin something like this:
+
+```php
+<?php
+
+namespace App
+
+use Illuminate\Database\Eloquent\Model;
+use Vinkla\Hashids\Eloquent\HasHashid;
+use Vinkla\Hashids\Eloquent\HashidTrait;
+
+class Foo extends Model implements HasHashid
+{
+    use HashidTrait;
+
+…
+```
+
+You can then get a hashid with `$foo->hashid`, and retrieve the model with
+`App\Foo::findHashid($hashid)` or `App\Foo::findHashidOrFail($hashid)`.
 
 ## Documentation
 
