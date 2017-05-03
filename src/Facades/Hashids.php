@@ -31,4 +31,42 @@ class Hashids extends Facade
     {
         return 'hashids';
     }
+    
+    /**
+     * Encode an integer/array and return hash.
+     *
+     * @param $ints int|mixed value to be encoded/hashed
+     *
+     * @return string Hash value
+     */
+    public static function encode($ints)
+    {
+        return self::optimize(parent::encode($ints));
+    }
+    
+    /**
+     * Decode the value.
+     *
+     * @param $hash string String hash value to be decoded.
+     *
+     * @return mixed|int
+     */
+    public static function decode($hash)
+    {
+        return self::optimize(parent::decode($hash));
+    }
+    
+    /**
+     * Optimize the result to ensure if it is single result,
+     * we get single output otherwise get result as sent.
+     *
+     * @param $result array|int|string
+     *
+     * @return mixed
+     */
+    protected static function optimize($result)
+    {
+        if (is_array($result) && 1 == count($result)) return $result[0];
+        return $result;
+    }
 }
