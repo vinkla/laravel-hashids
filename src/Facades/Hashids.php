@@ -55,11 +55,6 @@ class Hashids extends Facade
      */
     public static function decode($hash)
     {
-        if (is_numeric($hash)) return $hash;
-        if (is_array($hash)) {
-            if (empty($hash)) return [];
-            if (count($hash) == count(array_filter(array_map('is_numeric', $hash)))) return $hash;
-        }
         return self::optimize(parent::decode($hash));
     }
     
