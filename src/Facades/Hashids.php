@@ -46,10 +46,8 @@ class Hashids extends Facade
     
     /**
      * Decode the value.
-     * If hash is numeric, or an array of numeric characters, then return the hash as it is,
-     * since nothing can be decoded from that.
      *
-     * @param $hash string|array String hash value to be decoded.
+     * @param $hash string String hash value to be decoded.
      *
      * @return mixed|int
      */
