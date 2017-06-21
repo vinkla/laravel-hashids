@@ -38,6 +38,14 @@
     "extra": {
         "branch-alias": {
             "dev-master": "3.1-dev"
+        },
+        "laravel": {
+            "providers": [
+                "Vinkla\\Hashids\\HashidsServiceProvider"
+            ],
+            "aliases": {
+                "Hashids": "Vinkla\\Hashids\\Facades\\Hashids"
+            }
         }
     },
     "minimum-stability": "dev",
