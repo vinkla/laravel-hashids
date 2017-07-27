@@ -31,9 +31,9 @@ $extra_key = isset($_SERVER['HTTP_HOST']) ? $_SERVER['HTTP_HOST'] : '';
 
 $env_path = realpath(dirname(__FILE__).'/../.env');
 
-if($env_path){
+if ($env_path) {
     $main_hashid_default_salt = file_exists($env_path) ?  hash('sha256', file_get_contents($env_path) . $extra_key)  : $user_default_salt;
-}else{
+} else {
     $main_hashid_default_salt = $user_default_salt;
 }
 
