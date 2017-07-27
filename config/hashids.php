@@ -11,6 +11,23 @@
 
 declare(strict_types=1);
 
+ /*
+|--------------------------------------------------------------------------
+| Default Hashid Salt
+|--------------------------------------------------------------------------
+|
+| Here where it is defining a unique key based on HTTP_HOST and application
+| environment contents. This key is generated and hased with SHA-256 every 
+| time when using the following command:
+|
+|   php artisan config:cache
+|
+*/
+
+$extra_key = isset($_SERVER['HTTP_HOST']) ? $_SERVER['HTTP_HOST'] : '';
+
+$default_hashid_salt = hash('sha256', file_get_contents(realpath(dirname(__FILE__).'/../.env')) . $extra_key);
+
 return [
 
     /*
@@ -40,7 +57,7 @@ return [
     'connections' => [
 
         'main' => [
-            'salt' => 'your-salt-string',
+            'salt' => $default_hashid_salt,
             'length' => 'your-length-integer',
         ],
 
