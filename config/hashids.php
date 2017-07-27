@@ -17,16 +17,25 @@ declare(strict_types=1);
 |--------------------------------------------------------------------------
 |
 | Here where it is defining a unique key based on HTTP_HOST and application
-| environment contents. This key is generated and hased with SHA-256 every 
-| time when using the following command:
+| environment contents. So, this script is expecting to found .env file.
+| This key is generated and hashed with SHA-256 every time when using
+| the following command:
 |
 |   php artisan config:cache
 |
 */
 
+$user_default_salt = 'your-salt-string'; // This salt will be ignored all time, if .env file exists.
+
 $extra_key = isset($_SERVER['HTTP_HOST']) ? $_SERVER['HTTP_HOST'] : '';
 
-$default_hashid_salt = hash('sha256', file_get_contents(realpath(dirname(__FILE__).'/../.env')) . $extra_key);
+$env_path = realpath(dirname(__FILE__).'/../.env');
+
+if($env_path){
+    $main_hashid_default_salt = file_exists($env_path) ?  hash('sha256', file_get_contents($env_path) . $extra_key)  : $user_default_salt;
+}else{
+    $main_hashid_default_salt = $user_default_salt;
+}
 
 return [
 
@@ -57,7 +66,7 @@ return [
     'connections' => [
 
         'main' => [
-            'salt' => $default_hashid_salt,
+            'salt' => $main_hashid_default_salt,
             'length' => 'your-length-integer',
         ],
 
