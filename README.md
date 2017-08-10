@@ -116,17 +116,17 @@ use Vinkla\Hashids\HashidsManager;
 
 class Foo
 {
-	protected $hashids;
+    protected $hashids;
 
-	public function __construct(HashidsManager $hashids)
-	{
-		$this->hashids = $hashids;
-	}
+    public function __construct(HashidsManager $hashids)
+    {
+        $this->hashids = $hashids;
+    }
 
-	public function bar($id)
-	{
-		$this->hashids->encode($id)
-	}
+    public function bar($id)
+    {
+        $this->hashids->encode($id)
+    }
 }
 
 App::make('Foo')->bar();
