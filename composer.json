@@ -21,6 +21,7 @@
         "graham-campbell/analyzer": "^1.1",
         "graham-campbell/testbench": "^4.0",
         "mockery/mockery": "dev-master#c90a17247147543081e4d00f46911e422b49e583",
+        "orchestra/testbench": "^3.5",
         "phpunit/phpunit": "^6.3"
     },
     "autoload": {
