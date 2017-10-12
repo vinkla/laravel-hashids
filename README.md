@@ -67,12 +67,12 @@ $app->withFacades(true, [
 ]);
 ```
 
-Manually copy config file from `vendor/vinkla/hashids/config/hashids.php` to `config/hashids.php`. If `copy` directory is not exists, create it first.
+To add configuration file, manually copy config file from `vendor/vinkla/hashids/config/hashids.php` to `config/hashids.php`. If `copy` directory is not exists, create it first.
 
 
 ## Configuration
 
-Configuration is placed in `config/hashids.php` and you can modify to set your configuration. Also, make sure you check for changes to the original config file in this package between releases.
+Configuration is located in `config/hashids.php` and you can modify to set your configuration. Also, make sure you check for changes to the original config file in this package between releases.
 
 #### Default Connection Name
 
