@@ -2,7 +2,7 @@
 
 ![hashids](https://cloud.githubusercontent.com/assets/499192/11159205/faa429ae-8a5d-11e5-8c5d-c60a89290c5e.png)
 
-> A [Hashids](http://hashids.org) bridge for Laravel.
+A [Hashids](http://hashids.org) bridge for Laravel and Lumen.
 
 ```php
 // Encode integers.
@@ -29,6 +29,8 @@ Require this package, with [Composer](https://getcomposer.org/), in the root dir
 $ composer require vinkla/hashids
 ```
 
+### Laravel
+
 Add the service provider to `config/app.php` in the `providers` array, or if you're using Laravel 5.5, this can be done via the automatic package discovery.
 
 ```php
@@ -41,7 +43,25 @@ If you want you can use the [facade](http://laravel.com/docs/facades). Add the r
 'Hashids' => Vinkla\Hashids\Facades\Hashids::class
 ```
 
+### Lumen
+
+Register the service provider to `bootstrap/app.php`.
+
+```php
+$app->register(Vinkla\Hashids\HashidsServiceProvider::class);
+```
+
+If you want to use facade, add the reference in the `bootstrap/app.php`.
+
+```php
+$app->withFacades(true, [
+    Vinkla\Hashids\Facades\Hashids::class => 'Hashids'
+]);
+```
+
 ## Configuration
+
+### Laravel
 
 Laravel Hashids requires connection configuration. To get started, you'll need to publish all vendor assets:
 
@@ -50,6 +70,10 @@ $ php artisan vendor:publish
 ```
 
 This will create a `config/hashids.php` file in your app that you can modify to set your configuration. Also, make sure you check for changes to the original config file in this package between releases.
+
+### Lumen
+
+Manually copy config file from `vendor/vinkla/hashids/config/hashids.php` to `config/hashids.php`. If `copy` directory is not exists, create it first.
 
 #### Default Connection Name
 
