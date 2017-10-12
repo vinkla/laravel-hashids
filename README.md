@@ -43,6 +43,14 @@ If you want you can use the [facade](http://laravel.com/docs/facades). Add the r
 'Hashids' => Vinkla\Hashids\Facades\Hashids::class
 ```
 
+Laravel Hashids requires connection configuration. To get started, you'll need to publish all vendor assets:
+
+```bash
+$ php artisan vendor:publish
+```
+
+This will create a `config/hashids.php` file in your app that you can modify to set your configuration.
+
 ### Lumen
 
 Register the service provider to `bootstrap/app.php`.
@@ -59,21 +67,12 @@ $app->withFacades(true, [
 ]);
 ```
 
+Manually copy config file from `vendor/vinkla/hashids/config/hashids.php` to `config/hashids.php`. If `copy` directory is not exists, create it first.
+
+
 ## Configuration
 
-### Laravel
-
-Laravel Hashids requires connection configuration. To get started, you'll need to publish all vendor assets:
-
-```bash
-$ php artisan vendor:publish
-```
-
-This will create a `config/hashids.php` file in your app that you can modify to set your configuration. Also, make sure you check for changes to the original config file in this package between releases.
-
-### Lumen
-
-Manually copy config file from `vendor/vinkla/hashids/config/hashids.php` to `config/hashids.php`. If `copy` directory is not exists, create it first.
+Configuration is placed in `config/hashids.php` and you can modify to set your configuration. Also, make sure you check for changes to the original config file in this package between releases.
 
 #### Default Connection Name
 
