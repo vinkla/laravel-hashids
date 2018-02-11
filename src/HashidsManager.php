@@ -29,7 +29,7 @@ class HashidsManager extends AbstractManager
      *
      * @var \Vinkla\Hashids\HashidsFactory
      */
-    private $factory;
+    protected $factory;
 
     /**
      * Create a new Hashids manager instance.

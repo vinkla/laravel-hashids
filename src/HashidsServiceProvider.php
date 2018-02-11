@@ -31,7 +31,7 @@ class HashidsServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    public function boot()
+    public function boot(): void
     {
         $this->setupConfig();
     }
@@ -41,7 +41,7 @@ class HashidsServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    protected function setupConfig()
+    protected function setupConfig(): void
     {
         $source = realpath($raw = __DIR__.'/../config/hashids.php') ?: $raw;
 
@@ -59,7 +59,7 @@ class HashidsServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    public function register()
+    public function register(): void
     {
         $this->registerFactory();
         $this->registerManager();
@@ -71,7 +71,7 @@ class HashidsServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    protected function registerFactory()
+    protected function registerFactory(): void
     {
         $this->app->singleton('hashids.factory', function () {
             return new HashidsFactory();
@@ -85,7 +85,7 @@ class HashidsServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    protected function registerManager()
+    protected function registerManager(): void
     {
         $this->app->singleton('hashids', function (Container $app) {
             $config = $app['config'];
@@ -102,7 +102,7 @@ class HashidsServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    protected function registerBindings()
+    protected function registerBindings(): void
     {
         $this->app->bind('hashids.connection', function (Container $app) {
             $manager = $app['hashids'];
