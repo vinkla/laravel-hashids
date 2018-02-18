@@ -18,6 +18,7 @@ $hashidsManager->encode(911);
 [![Build Status](https://img.shields.io/travis/vinkla/laravel-hashids/master.svg?style=flat)](https://travis-ci.org/vinkla/laravel-hashids)
 [![StyleCI](https://styleci.io/repos/30237105/shield?style=flat)](https://styleci.io/repos/30237105)
 [![Coverage Status](https://img.shields.io/codecov/c/github/vinkla/laravel-hashids.svg?style=flat)](https://codecov.io/github/vinkla/laravel-hashids)
+[![Total Downloads](https://img.shields.io/packagist/dt/vinkla/hashids.svg?style=flat)](https://packagist.org/packages/vinkla/hashids)
 [![Latest Version](https://img.shields.io/github/release/vinkla/hashids.svg?style=flat)](https://github.com/vinkla/hashids/releases)
 [![License](https://img.shields.io/packagist/l/vinkla/hashids.svg?style=flat)](https://packagist.org/packages/vinkla/hashids)
 
