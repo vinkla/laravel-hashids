@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 5.0.0 (released 2018-03-12)
+
+- Added Hashids 3.0 support
+
 ## 4.0.0 (released 2018-02-11)
 
 - Added Laravel 5.6 support
