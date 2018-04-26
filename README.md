@@ -30,12 +30,6 @@ Require this package, with [Composer](https://getcomposer.org/), in the root dir
 $ composer require vinkla/hashids
 ```
 
-Add the service provider to `config/app.php` in the `providers` array, or if you're using Laravel 5.5, this can be done via the automatic package discovery.
-
-```php
-Vinkla\Hashids\HashidsServiceProvider::class
-```
-
 If you want you can use the [facade](http://laravel.com/docs/facades). Add the reference in `config/app.php` to your aliases array.
 
 ```php
