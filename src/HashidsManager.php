@@ -20,6 +20,11 @@ use Illuminate\Contracts\Config\Repository;
 /**
  * This is the Hashids manager class.
  *
+ * @method string encode(mixed ...$numbers) Encode parameters to generate a hash.
+ * @method array decode(string $hash) Decode a hash to the original parameter values.
+ * @method string encodeHex(string $str) Encode hexadecimal values and generate a hash string.
+ * @method string decodeHex(string $hash) Decode a hexadecimal hash.
+ *
  * @author Vincent Klaiber <hello@vinkla.com>
  */
 class HashidsManager extends AbstractManager
