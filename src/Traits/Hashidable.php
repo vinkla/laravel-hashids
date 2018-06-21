@@ -1,6 +1,6 @@
 <?php
 
-declare (strict_types = 1);
+declare(strict_types=1);
 
 namespace Vinkla\Hashids\Traits;
 
@@ -13,7 +13,6 @@ use Vinkla\Hashids\Facades\Hashids;
  */
 trait Hashidable
 {
-
     /**
      * Encode key's directly for specific to calling {ModelClass}.
      *
@@ -94,7 +93,7 @@ trait Hashidable
      */
     public function getRoute($mode)
     {
-        return route($this->getTable() . '.' . $mode, [
+        return route($this->getTable().'.'.$mode, [
             str_singular($this->getTable()) => $this->getRouteKey(),
         ]);
     }
