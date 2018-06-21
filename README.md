@@ -65,6 +65,10 @@ This is the class of most interest. It is bound to the ioc container as `hashids
 
 This facade will dynamically pass static method calls to the `hashids` object in the ioc container which by default is the `HashidsManager` class.
 
+#### Traits\Hashidable
+
+This trait will add various shorthand support directly on Model class which will help faster access to encoding/decoding of hash for id's or any other string specific to that particular `Model`.
+
 #### HashidsServiceProvider
 
 This class contains no public methods of interest. This class should be added to the providers array in `config/app.php`. This class will setup ioc bindings.
@@ -126,6 +130,32 @@ class Foo
 
 App::make('Foo')->bar();
 ```
+
+If you prefer using a Trait extended to your Model class
+
+```php
+namespace App;
+
+use Illuminate\Database\Eloquent\Model;
+use Vinkla\Hashids\Traits\Hashidable;
+
+class Foo extends Model
+{
+    use Hashidable;
+}
+
+Foo::encodeKey('1');        // generates hash key
+Foo::decodeKey('hash_key'); // decodes to actual key value
+
+$foo = new Foo;
+$foo->name = 'Hello';
+$foo->save();
+
+$foo->route_key;  // Provides hash key
+$foo->show_route; // Provides resource route for show as "/foos/{hash_key}"
+$foo->edit_route; // Provides resource route for edit as "/foos/{hash_key}/edit"
+```
+
 
 ## Documentation
 
