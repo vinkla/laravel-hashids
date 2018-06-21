@@ -1,6 +1,6 @@
 <?php
 
-declare(strict_types=1);
+declare (strict_types = 1);
 
 namespace Vinkla\Hashids\Traits;
 
@@ -15,10 +15,10 @@ trait Hashidable
 {
 
     /**
-     * Encode key's directly for specific to calling Model class.
+     * Encode key's directly for specific to calling {ModelClass}.
      *
      * @example
-     *      {ModelClass}::encodeKey($key)
+     *      \Vinkla\Tests\Hashids\TestModel::encodeKey($key)
      *
      * @param $key
      */
@@ -28,10 +28,10 @@ trait Hashidable
     }
 
     /**
-     * Decode provided hash into proper value using calling Model class.
+     * Decode provided hash into proper value using calling {ModelClass}.
      *
      * @example
-     *      {ModelClass}::decodeKey($hash)
+     *      \Vinkla\Tests\Hashids\TestModel::decodeKey($hash)
      *
      * @param $hash
      */
@@ -41,16 +41,16 @@ trait Hashidable
     }
 
     /**
-     * Short hand method to directly find Model Object by Hashed Key.
+     * Short hand method to directly find {ModelObject] by Hashed Key.
      *
      * @example
-     *      {ModelClass}::findByKey($hash)
+     *      \Vinkla\Tests\Hashids\TestModel::findByKey($hash)
      *
      * @param $query
      * @param $hash
      *
      * @return
-     *      Model Object or null
+     *      \Vinkla\Tests\Hashids\TestModel|null
      */
     public function scopeFindByKey($query, $hash)
     {
@@ -58,12 +58,12 @@ trait Hashidable
         if ($id) {
             return $this->find($id);
         } else {
-            return null;
+            return;
         }
     }
 
     /**
-     * Get Hashed key for Model object.
+     * Get Hashed key for \Vinkla\Tests\Hashids\TestModel.
      *
      * @return mixed
      */
@@ -73,7 +73,7 @@ trait Hashidable
     }
 
     /**
-     * Get the route key directly as attribute for Model Object.
+     * Get the route key directly as attribute for {ModelObject].
      *
      * @example
      *      $model->route_key
@@ -94,13 +94,13 @@ trait Hashidable
      */
     public function getRoute($mode)
     {
-        return route($this->getTable().'.'.$mode, [
+        return route($this->getTable() . '.' . $mode, [
             str_singular($this->getTable()) => $this->getRouteKey(),
         ]);
     }
 
     /**
-     * Short hand mechanism to generate show route URL for model object.
+     * Short hand mechanism to generate show route URL for {ModelObject].
      *
      * @example
      *      $model->show_route  // /models/{route_key}
@@ -113,11 +113,11 @@ trait Hashidable
     }
 
     /**
-     * Short hand mechanism to generate edit route URL for model object.
+     * Short hand mechanism to generate edit route URL for {ModelObject].
      *
      * @example
      *      $model->show_route  // /models/{route_key}/edit
-     * 
+     *
      * @return mixed
      */
     public function getEditRouteAttribute()
