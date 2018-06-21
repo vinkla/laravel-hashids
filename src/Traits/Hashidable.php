@@ -1,6 +1,6 @@
 <?php
 
-declare (strict_types = 1);
+declare(strict_types=1);
 
 namespace Vinkla\Hashids\Traits;
 
@@ -15,7 +15,7 @@ trait Hashidable
 {
 
     /**
-     * Encode key's directly for specific to calling Model class
+     * Encode key's directly for specific to calling Model class.
      *
      * @example
      *      {ModelClass}::encodeKey($key)
@@ -28,7 +28,7 @@ trait Hashidable
     }
 
     /**
-     * Decode provided hash into proper value using calling Model class
+     * Decode provided hash into proper value using calling Model class.
      *
      * @example
      *      {ModelClass}::decodeKey($hash)
@@ -41,7 +41,7 @@ trait Hashidable
     }
 
     /**
-     * Short hand method to directly find Model Object by Hashed Key
+     * Short hand method to directly find Model Object by Hashed Key.
      *
      * @example
      *      {ModelClass}::findByKey($hash)
@@ -62,7 +62,7 @@ trait Hashidable
     }
 
     /**
-     * Get Hashed key for Model object
+     * Get Hashed key for Model object.
      *
      * @return mixed
      */
@@ -72,7 +72,7 @@ trait Hashidable
     }
 
     /**
-     * Get the route key directly as attribute for Model Object
+     * Get the route key directly as attribute for Model Object.
      *
      * @example
      *      $model->route_key
@@ -85,7 +85,7 @@ trait Hashidable
     }
 
     /**
-     *  Get the URL by resource route mechanim
+     *  Get the URL by resource route mechanism.
      *
      * @param $mode - should be supported by the resourcde route
      *
@@ -99,7 +99,7 @@ trait Hashidable
     }
 
     /**
-     * Short hand mechanism to generate show route URL for model object
+     * Short hand mechanism to generate show route URL for model object.
      *
      * @example
      *      $model->show_route  // /models/{route_key}
@@ -112,7 +112,7 @@ trait Hashidable
     }
 
     /**
-     * Short hand mechanism to generate edit route URL for model object
+     * Short hand mechanism to generate edit route URL for model object.
      *
      * @example
      *      $model->show_route  // /models/{route_key}/edit
