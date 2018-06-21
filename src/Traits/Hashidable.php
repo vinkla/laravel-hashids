@@ -57,8 +57,9 @@ trait Hashidable
         $id = $this->scopeDecodeKey($query, $hash);
         if ($id) {
             return $this->find($id);
+        } else {
+            return null;
         }
-        return null;
     }
 
     /**
@@ -93,7 +94,7 @@ trait Hashidable
      */
     public function getRoute($mode)
     {
-        return route($this->getTable() . '.' . $mode, [
+        return route($this->getTable().'.'.$mode, [
             str_singular($this->getTable()) => $this->getRouteKey(),
         ]);
     }
@@ -116,6 +117,7 @@ trait Hashidable
      *
      * @example
      *      $model->show_route  // /models/{route_key}/edit
+     * 
      * @return mixed
      */
     public function getEditRouteAttribute()
