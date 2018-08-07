@@ -15,12 +15,12 @@ Hashids::decode('1LLb3b4ck');
 $hashidsManager->encode(911);
 ```
 
-[![Build Status](https://img.shields.io/travis/vinkla/laravel-hashids/master.svg?style=flat)](https://travis-ci.org/vinkla/laravel-hashids)
+[![Build Status](https://badgen.net/travis/vinkla/laravel-hashids/master)](https://travis-ci.org/vinkla/laravel-hashids)
 [![StyleCI](https://styleci.io/repos/30237105/shield?style=flat)](https://styleci.io/repos/30237105)
-[![Coverage Status](https://img.shields.io/codecov/c/github/vinkla/laravel-hashids.svg?style=flat)](https://codecov.io/github/vinkla/laravel-hashids)
-[![Total Downloads](https://img.shields.io/packagist/dt/vinkla/hashids.svg?style=flat)](https://packagist.org/packages/vinkla/hashids)
-[![Latest Version](https://img.shields.io/github/release/vinkla/hashids.svg?style=flat)](https://github.com/vinkla/hashids/releases)
-[![License](https://img.shields.io/packagist/l/vinkla/hashids.svg?style=flat)](https://packagist.org/packages/vinkla/hashids)
+[![Coverage Status](https://badgen.net/codecov/c/github/vinkla/laravel-hashids)](https://codecov.io/github/vinkla/laravel-hashids)
+[![Total Downloads](https://badgen.net/packagist/dt/vinkla/hashids)](https://packagist.org/packages/vinkla/hashids)
+[![Latest Version](https://badgen.net/github/release/vinkla/hashids)](https://github.com/vinkla/hashids/releases)
+[![License](https://badgen.net/packagist/license/vinkla/hashids)](https://packagist.org/packages/vinkla/hashids)
 
 ## Installation
 
