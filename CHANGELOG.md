@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 5.1.0 (released 2018-08-23)
+
+- Added laravel 5.7 support
+- Removed laravel 5.6 support
+
 ## 5.0.0 (released 2018-03-12)
 
 - Added Hashids 3.0 support
