@@ -19,6 +19,9 @@ use Illuminate\Support\Facades\Facade;
  * This is the Hashids facade class.
  *
  * @author Vincent Klaiber <hello@vinkla.com>
+ *
+ * @method static array decode(string $hash)
+ * @method static string encode(array|string $value)
  */
 class Hashids extends Facade
 {
