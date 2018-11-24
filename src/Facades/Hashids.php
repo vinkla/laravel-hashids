@@ -20,8 +20,10 @@ use Illuminate\Support\Facades\Facade;
  *
  * @author Vincent Klaiber <hello@vinkla.com>
  *
- * @method static array decode(string $hash)
- * @method static string encode(array|string $value)
+ * @method static string encode(mixed ...$numbers) Encode parameters to generate a hash.
+ * @method static array decode(string $hash) Decode a hash to the original parameter values.
+ * @method static string encodeHex(string $str) Encode hexadecimal values and generate a hash string.
+ * @method static string decodeHex(string $hash) Decode a hexadecimal hash.
  */
 class Hashids extends Facade
 {
