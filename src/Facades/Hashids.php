@@ -19,6 +19,11 @@ use Illuminate\Support\Facades\Facade;
  * This is the Hashids facade class.
  *
  * @author Vincent Klaiber <hello@vinkla.com>
+ *
+ * @method static string encode(mixed ...$numbers) Encode parameters to generate a hash.
+ * @method static array decode(string $hash) Decode a hash to the original parameter values.
+ * @method static string encodeHex(string $str) Encode hexadecimal values and generate a hash string.
+ * @method static string decodeHex(string $hash) Decode a hexadecimal hash.
  */
 class Hashids extends Facade
 {
