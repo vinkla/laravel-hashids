@@ -46,7 +46,7 @@ return [
         ],
 
         'alternative' => [
-            'salt' => env('HASHIDS_SALT', 'your-alternative-salt-string'),
+            'salt' => env('HASHIDS_SALT', 'your-salt-string'),
             'length' => env('HASHIDS_INTEGER', 1),
             'alphabet' => env('HASHIDS_ALPHABET', 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890'),
         ],
