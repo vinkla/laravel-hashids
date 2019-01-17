@@ -40,13 +40,15 @@ return [
     'connections' => [
 
         'main' => [
-            'salt' => 'your-salt-string',
-            'length' => 'your-length-integer',
+            'salt' => env('HASHIDS_MAIN_SALT', 'your-salt-string'),
+            'length' => env('HASHIDS_MAIN_INTEGER', 1),
+            'alphabet' => env('HASHIDS_MAIN_ALPHABET', 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890'),
         ],
 
         'alternative' => [
-            'salt' => 'your-salt-string',
-            'length' => 'your-length-integer',
+            'salt' => env('HASHIDS_ALTERNATIVE_SALT', 'your-alternative-salt-string'),
+            'length' => env('HASHIDS_ALTERNATIVE_INTEGER', 2),
+            'alphabet' => env('HASHIDS_ALTERNATIVE_ALPHABET', 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890'),
         ],
 
     ],
