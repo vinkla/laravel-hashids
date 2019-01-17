@@ -14,10 +14,10 @@ declare(strict_types=1);
 namespace Vinkla\Hashids;
 
 use Hashids\Hashids;
-use Illuminate\Contracts\Container\Container;
-use Illuminate\Foundation\Application as LaravelApplication;
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Contracts\Container\Container;
 use Laravel\Lumen\Application as LumenApplication;
+use Illuminate\Foundation\Application as LaravelApplication;
 
 /**
  * This is the Hashids service provider class.
@@ -88,10 +88,9 @@ class HashidsServiceProvider extends ServiceProvider
     protected function registerManager(): void
     {
         $this->app->singleton('hashids', function (Container $app) {
-            $config = $app['config'];
             $factory = $app['hashids.factory'];
 
-            return new HashidsManager($config, $factory);
+            return new HashidsManager($app, $factory);
         });
 
         $this->app->alias('hashids', HashidsManager::class);

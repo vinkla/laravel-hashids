@@ -13,9 +13,9 @@ declare(strict_types=1);
 
 namespace Vinkla\Hashids;
 
-use GrahamCampbell\Manager\AbstractManager;
 use Hashids\Hashids;
-use Illuminate\Contracts\Config\Repository;
+use \InvalidArgumentException;
+use Illuminate\Support\Manager;
 
 /**
  * This is the Hashids manager class.
@@ -27,7 +27,7 @@ use Illuminate\Contracts\Config\Repository;
  *
  * @author Vincent Klaiber <hello@vinkla.com>
  */
-class HashidsManager extends AbstractManager
+class HashidsManager extends Manager
 {
     /**
      * The factory instance.
@@ -37,16 +37,22 @@ class HashidsManager extends AbstractManager
     protected $factory;
 
     /**
+     * Get a default connection.
+     *
+     * @var string|null
+     */
+    protected $defaultConnection;
+
+    /**
      * Create a new Hashids manager instance.
      *
-     * @param \Illuminate\Contracts\Config\Repository $config
-     * @param \Vinkla\Hashids\HashidsFactory $factory
-     *
+     * @param  \Illuminate\Foundation\Application  $app
+     * @param  \Vinkla\Hashids\HashidsFactory  $factory
      * @return void
      */
-    public function __construct(Repository $config, HashidsFactory $factory)
+    public function __construct($app, HashidsFactory $factory)
     {
-        parent::__construct($config);
+        parent::__construct($app);
 
         $this->factory = $factory;
     }
@@ -54,23 +60,67 @@ class HashidsManager extends AbstractManager
     /**
      * Create the connection instance.
      *
-     * @param array $config
-     *
+     * @param  string  $driver
      * @return \Hashids\Hashids
      */
-    protected function createConnection(array $config): Hashids
+    public function createDriver($driver): Hashids
     {
-        return $this->factory->make($config);
+        // First, we will determine if a custom driver creator exists for the given driver and
+        // if it does not we will check for a creator method for the driver. Custom creator
+        // callbacks allow developers to build their own "drivers" easily using Closures.
+        if (isset($this->customCreators[$driver])) {
+            return $this->callCustomCreator($driver);
+        } else {
+            $config = $this->app['config']->get("hashids.connections.{$driver}");
+
+            if (is_array($config)) {
+                return $this->factory->make($config);
+            }
+        }
+
+        throw new InvalidArgumentException("Connection [$driver] not configured.");
     }
 
     /**
-     * Get the configuration name.
+     * Get a connection.
+     *
+     * @param  string|null  $name
+     * @return \Hashids\Hashids
+     */
+    public function connection($name = null)
+    {
+        return $this->driver($name);
+    }
+
+    /**
+     * Get the default connection name.
      *
      * @return string
      */
-    protected function getConfigName(): string
+    public function getDefaultConnection()
     {
-        return 'hashids';
+        return $this->defaultConnection ?? $this->app['config']->get('hashids.default');
+    }
+
+    /**
+     * Alias for "getDefaultConnection" method.
+     *
+     * @return string
+     */
+    public function getDefaultDriver()
+    {
+        return $this->getDefaultConnection();
+    }
+
+    /**
+     * Set a default connection.
+     *
+     * @param  string  $name
+     * @return void
+     */
+    public function setDefaultConnection($name)
+    {
+        $this->defaultConnection = $name;
     }
 
     /**
