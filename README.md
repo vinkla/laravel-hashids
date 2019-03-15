@@ -133,4 +133,4 @@ There are other classes in this package that are not documented here. This is be
 
 ## License
 
-[MIT](LICENSE) © [Vincent Klaiber](https://vinkla.com)
+[MIT](LICENSE) © [Vincent Klaiber](https://doubledip.se)

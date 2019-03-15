@@ -3,7 +3,7 @@
 /*
  * This file is part of Laravel Hashids.
  *
- * (c) Vincent Klaiber <hello@vinkla.com>
+ * (c) Vincent Klaiber <hello@doubledip.se>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
@@ -25,7 +25,7 @@ use Illuminate\Contracts\Config\Repository;
  * @method string encodeHex(string $str) Encode hexadecimal values and generate a hash string.
  * @method string decodeHex(string $hash) Decode a hexadecimal hash.
  *
- * @author Vincent Klaiber <hello@vinkla.com>
+ * @author Vincent Klaiber <hello@doubledip.se>
  */
 class HashidsManager extends AbstractManager
 {
