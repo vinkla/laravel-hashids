@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 6.0.0 (released 2019-04-03)
+
+- Added hashids/hashids 4.0 support
+- Removed php 7.1 support
+
 ## 5.2.0 (released 2019-02-27)
 
 - Added laravel 5.8 support
