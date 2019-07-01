@@ -14,6 +14,7 @@ declare(strict_types=1);
 namespace Vinkla\Hashids;
 
 use Hashids\Hashids;
+use Illuminate\Support\Arr;
 
 /**
  * This is the Hashids factory class.
@@ -48,9 +49,9 @@ class HashidsFactory
     protected function getConfig(array $config): array
     {
         return [
-            'salt' => array_get($config, 'salt', ''),
-            'length' => array_get($config, 'length', 0),
-            'alphabet' => array_get($config, 'alphabet', 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890'),
+            'salt' => Arr::get($config, 'salt', ''),
+            'length' => Arr::get($config, 'length', 0),
+            'alphabet' => Arr::get($config, 'alphabet', 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890'),
         ];
     }
 
