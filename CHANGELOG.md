@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 7.0.0 (released 2019-08-28)
+
+- Added Laravel 6.0 support
+- Dropped Laravel 5.8 support
+
 ## 6.0.0 (released 2019-04-03)
 
 - Added hashids/hashids 4.0 support
