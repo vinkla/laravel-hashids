@@ -40,7 +40,7 @@ If you want you can use the [facade](http://laravel.com/docs/facades). Add the r
 Laravel Hashids requires connection configuration. To get started, you'll need to publish all vendor assets:
 
 ```bash
-$ php artisan vendor:publish
+$ php artisan vendor:publish --tag=hashids
 ```
 
 This will create a `config/hashids.php` file in your app that you can modify to set your configuration. Also, make sure you check for changes to the original config file in this package between releases.
