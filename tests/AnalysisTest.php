@@ -34,8 +34,8 @@ class AnalysisTest extends TestCase
     protected function getPaths()
     {
         return [
-            realpath(__DIR__.'/../config'),
-            realpath(__DIR__.'/../src'),
+            realpath(__DIR__ . '/../config'),
+            realpath(__DIR__ . '/../src'),
             realpath(__DIR__),
         ];
     }

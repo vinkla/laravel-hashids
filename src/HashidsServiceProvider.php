@@ -43,7 +43,7 @@ class HashidsServiceProvider extends ServiceProvider
      */
     protected function setupConfig(): void
     {
-        $source = realpath($raw = __DIR__.'/../config/hashids.php') ?: $raw;
+        $source = realpath($raw = __DIR__ . '/../config/hashids.php') ?: $raw;
 
         if ($this->app instanceof LaravelApplication && $this->app->runningInConsole()) {
             $this->publishes([$source => config_path('hashids.php')]);
