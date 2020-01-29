@@ -69,11 +69,11 @@ Here you can see an example of just how simple this package is to use. Out of th
 // You can alias this in config/app.php.
 use Vinkla\Hashids\Facades\Hashids;
 
-Hashids::encode(4815162342);
 // We're done here - how easy was that, it just works!
+Hashids::encode(4815162342);
 
-Hashids::decode('doyouthinkthatsairyourebreathingnow');
 // This example is simple and there are far more methods available.
+Hashids::decode('doyouthinkthatsairyourebreathingnow');
 ```
 
 The Hashids manager will behave like it is a `Hashids\Hashids`. If you want to call specific connections, you can do that with the connection method:
@@ -81,10 +81,10 @@ The Hashids manager will behave like it is a `Hashids\Hashids`. If you want to c
 ```php
 use Vinkla\Hashids\Facades\Hashids;
 
-// Writing this…
+// Writing this...
 Hashids::connection('main')->encode($id);
 
-// …is identical to writing this
+// ...is identical to writing this
 Hashids::encode($id);
 
 // and is also identical to writing this.
@@ -120,9 +120,7 @@ class Foo
 App::make('Foo')->bar();
 ```
 
-## Documentation
-
-There are other classes in this package that are not documented here. This is because the package is a Laravel wrapper of [Ivan Akimov's](https://github.com/ivanakimov) [Hashids package](https://github.com/vinkla/hashids.php#readme).
+For more information on how to use the `\Hashids\Hasdhids` class, check out the docs at [`hashids/hashids`](https://github.com/vinkla/hashids.php#readme).
 
 ## License
 
