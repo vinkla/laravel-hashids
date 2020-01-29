@@ -128,7 +128,7 @@ App::make('Foo')->bar();
 
 ## Documentation
 
-There are other classes in this package that are not documented here. This is because the package is a Laravel wrapper of [Ivan Akimov's](https://github.com/ivanakimov) [Hashids package](https://github.com/ivanakimov/hashids.php#readme).
+There are other classes in this package that are not documented here. This is because the package is a Laravel wrapper of [Ivan Akimov's](https://github.com/ivanakimov) [Hashids package](https://github.com/vinkla/hashids.php#readme).
 
 ## License
 
