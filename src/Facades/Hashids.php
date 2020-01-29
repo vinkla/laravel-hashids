@@ -16,10 +16,10 @@ namespace Vinkla\Hashids\Facades;
 use Illuminate\Support\Facades\Facade;
 
 /**
- * @method static string encode(mixed ...$numbers) Encode parameters to generate a hash.
- * @method static array decode(string $hash) Decode a hash to the original parameter values.
- * @method static string encodeHex(string $str) Encode hexadecimal values and generate a hash string.
- * @method static string decodeHex(string $hash) Decode a hexadecimal hash.
+ * @method \Hashids\Hashids encode(mixed ...$numbers)
+ * @method \Hashids\Hashids decode(string $hash)
+ * @method \Hashids\Hashids encodeHex(string $str)
+ * @method \Hashids\Hashids decodeHex(string $hash)
  */
 class Hashids extends Facade
 {
