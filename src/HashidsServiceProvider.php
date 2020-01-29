@@ -1,12 +1,12 @@
 <?php
 
-/*
- * This file is part of Laravel Hashids.
- *
- * (c) Vincent Klaiber <hello@doubledip.se>
+/**
+ * Copyright (c) Vincent Klaiber.
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
+ *
+ * @see https://github.com/vinkla/laravel-hashids
  */
 
 declare(strict_types=1);
@@ -19,28 +19,13 @@ use Illuminate\Foundation\Application as LaravelApplication;
 use Illuminate\Support\ServiceProvider;
 use Laravel\Lumen\Application as LumenApplication;
 
-/**
- * This is the Hashids service provider class.
- *
- * @author Vincent Klaiber <hello@doubledip.se>
- */
 class HashidsServiceProvider extends ServiceProvider
 {
-    /**
-     * Boot the service provider.
-     *
-     * @return void
-     */
     public function boot(): void
     {
         $this->setupConfig();
     }
 
-    /**
-     * Setup the config.
-     *
-     * @return void
-     */
     protected function setupConfig(): void
     {
         $source = realpath($raw = __DIR__ . '/../config/hashids.php') ?: $raw;
@@ -54,11 +39,6 @@ class HashidsServiceProvider extends ServiceProvider
         $this->mergeConfigFrom($source, 'hashids');
     }
 
-    /**
-     * Register the service provider.
-     *
-     * @return void
-     */
     public function register(): void
     {
         $this->registerFactory();
@@ -66,11 +46,6 @@ class HashidsServiceProvider extends ServiceProvider
         $this->registerBindings();
     }
 
-    /**
-     * Register the factory class.
-     *
-     * @return void
-     */
     protected function registerFactory(): void
     {
         $this->app->singleton('hashids.factory', function () {
@@ -80,11 +55,6 @@ class HashidsServiceProvider extends ServiceProvider
         $this->app->alias('hashids.factory', HashidsFactory::class);
     }
 
-    /**
-     * Register the manager class.
-     *
-     * @return void
-     */
     protected function registerManager(): void
     {
         $this->app->singleton('hashids', function (Container $app) {
@@ -97,11 +67,6 @@ class HashidsServiceProvider extends ServiceProvider
         $this->app->alias('hashids', HashidsManager::class);
     }
 
-    /**
-     * Register the bindings.
-     *
-     * @return void
-     */
     protected function registerBindings(): void
     {
         $this->app->bind('hashids.connection', function (Container $app) {
@@ -114,8 +79,6 @@ class HashidsServiceProvider extends ServiceProvider
     }
 
     /**
-     * Get the services provided by the provider.
-     *
      * @return string[]
      */
     public function provides(): array

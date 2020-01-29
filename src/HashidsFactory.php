@@ -1,12 +1,12 @@
 <?php
 
-/*
- * This file is part of Laravel Hashids.
- *
- * (c) Vincent Klaiber <hello@doubledip.se>
+/**
+ * Copyright (c) Vincent Klaiber.
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
+ *
+ * @see https://github.com/vinkla/laravel-hashids
  */
 
 declare(strict_types=1);
@@ -16,20 +16,8 @@ namespace Vinkla\Hashids;
 use Hashids\Hashids;
 use Illuminate\Support\Arr;
 
-/**
- * This is the Hashids factory class.
- *
- * @author Vincent Klaiber <hello@doubledip.se>
- */
 class HashidsFactory
 {
-    /**
-     * Make a new Hashids client.
-     *
-     * @param array $config
-     *
-     * @return \Hashids\Hashids
-     */
     public function make(array $config): Hashids
     {
         $config = $this->getConfig($config);
@@ -37,15 +25,6 @@ class HashidsFactory
         return $this->getClient($config);
     }
 
-    /**
-     * Get the configuration data.
-     *
-     * @param array $config
-     *
-     * @throws \InvalidArgumentException
-     *
-     * @return array
-     */
     protected function getConfig(array $config): array
     {
         return [
@@ -55,13 +34,6 @@ class HashidsFactory
         ];
     }
 
-    /**
-     * Get the hashids client.
-     *
-     * @param array $config
-     *
-     * @return \Hashids\Hashids
-     */
     protected function getClient(array $config): Hashids
     {
         return new Hashids($config['salt'], $config['length'], $config['alphabet']);

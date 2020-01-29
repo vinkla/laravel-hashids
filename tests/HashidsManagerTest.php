@@ -1,12 +1,12 @@
 <?php
 
-/*
- * This file is part of Laravel Hashids.
- *
- * (c) Vincent Klaiber <hello@doubledip.se>
+/**
+ * Copyright (c) Vincent Klaiber.
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
+ *
+ * @see https://github.com/vinkla/laravel-hashids
  */
 
 declare(strict_types=1);
@@ -20,11 +20,6 @@ use Mockery;
 use Vinkla\Hashids\HashidsFactory;
 use Vinkla\Hashids\HashidsManager;
 
-/**
- * This is the Hashids manager test class.
- *
- * @author Vincent Klaiber <hello@doubledip.se>
- */
 class HashidsManagerTest extends AbstractTestBenchTestCase
 {
     public function testCreateConnection()
