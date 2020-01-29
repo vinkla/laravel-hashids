@@ -47,23 +47,9 @@ This option `default` is where you may specify which of the connections below yo
 
 This option `connections` is where each of the connections are setup for your application. Example configuration has been included, but you may add as many connections as you would like.
 
-
 ## Usage
 
-#### HashidsManager
-
-This is the class of most interest. It is bound to the ioc container as `hashids` and can be accessed using the `Facades\Hashids` facade. This class implements the ManagerInterface by extending AbstractManager. The interface and abstract class are both part of the [Laravel Manager](https://github.com/GrahamCampbell/Laravel-Manager) package, so you may want to go and checkout the docs for how to use the manager class over at that repository. Note that the connection class returned will always be an instance of `Hashids\Hashids`.
-
-#### Facades\Hashids
-
-This facade will dynamically pass static method calls to the `hashids` object in the ioc container which by default is the `HashidsManager` class.
-
-#### HashidsServiceProvider
-
-This class contains no public methods of interest. This class should be added to the providers array in `config/app.php`. This class will setup ioc bindings.
-
-### Examples
-Here you can see an example of just how simple this package is to use. Out of the box, the default adapter is `main`. After you enter your authentication details in the config file, it will just work:
+Here you can see an example of you may use this package. Out of the box, the default adapter is `main`. After you enter your authentication details in the config file, it will just work:
 
 ```php
 // You can alias this in config/app.php.
@@ -76,7 +62,7 @@ Hashids::encode(4815162342);
 Hashids::decode('doyouthinkthatsairyourebreathingnow');
 ```
 
-The Hashids manager will behave like it is a `Hashids\Hashids`. If you want to call specific connections, you can do that with the connection method:
+The manager will behave like it is a `Hashids\Hashids` class. If you want to call specific connections, you can do that with the connection method:
 
 ```php
 use Vinkla\Hashids\Facades\Hashids;
@@ -97,7 +83,7 @@ Hashids::getDefaultConnection(); // This will return main.
 Hashids::setDefaultConnection('alternative'); // The default is now alternative.
 ```
 
-If you prefer to use dependency injection over facades like me, then you can inject the manager:
+If you prefer to use dependency injection over facades, then you can inject the manager:
 
 ```php
 use Vinkla\Hashids\HashidsManager;
@@ -120,7 +106,7 @@ class Foo
 App::make('Foo')->bar();
 ```
 
-For more information on how to use the `\Hashids\Hashids` class, check out the docs at [`hashids/hashids`](https://github.com/vinkla/hashids.php#readme).
+For more information on how to use the `\Hashids\Hashids` class, check out the docs at [`hashids/hashids`](https://github.com/vinkla/hashids.php).
 
 ## License
 
