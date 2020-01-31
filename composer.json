@@ -2,16 +2,8 @@
     "name": "vinkla/hashids",
     "description": "A Hashids bridge for Laravel",
     "keywords": [
-        "laravel",
         "hashids",
-        "hashid",
-        "hash",
-        "ids",
-        "youtube",
-        "bitly",
-        "encrypt",
-        "decrypt",
-        "obfuscate"
+        "laravel"
     ],
     "license": "MIT",
     "authors": [
