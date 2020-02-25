@@ -15,7 +15,7 @@ Hashids::decode('1LLb3b4ck');
 $hashidsManager->encode(911);
 ```
 
-[![Build Status](https://badgen.net/github/status/vinkla/laravel-hashids/master)](https://github.com/vinkla/laravel-hashids/actions)
+[![Build Status](https://badgen.net/github/checks/vinkla/alfred-hashids?label=build&icon=github)](https://github.com/vinkla/laravel-hashids/actions)
 [![Monthly Downloads](https://badgen.net/packagist/dm/vinkla/hashids)](https://packagist.org/packages/vinkla/laravel-hashids/stats)
 [![Latest Version](https://badgen.net/github/release/vinkla/laravel-hashids)](https://github.com/vinkla/laravel-hashids/releases)
 
