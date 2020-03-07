@@ -25,7 +25,10 @@ use Illuminate\Contracts\Config\Repository;
  */
 class HashidsManager extends AbstractManager
 {
-    protected HashidsFactory $factory;
+    /**
+     * @var \Vinkla\Hashids\HashidsFactory
+     */
+    protected $factory;
 
     public function __construct(Repository $config, HashidsFactory $factory)
     {
