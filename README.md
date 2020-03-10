@@ -17,7 +17,7 @@ $hashidsManager->encode(911);
 
 [![Build Status](https://badgen.net/github/checks/vinkla/laravel-hashids?label=build&icon=github)](https://github.com/vinkla/laravel-hashids/actions)
 [![Monthly Downloads](https://badgen.net/packagist/dm/vinkla/hashids)](https://packagist.org/packages/vinkla/hashids/stats)
-[![Latest Version](https://badgen.net/github/release/vinkla/laravel-hashids)](https://github.com/vinkla/laravel-hashids/releases)
+[![Latest Version](https://badgen.net/packagist/v/vinkla/hashids)](https://packagist.org/packages/vinkla/hashids)
 
 ## Installation
 
