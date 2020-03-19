@@ -40,11 +40,13 @@ return [
         'main' => [
             'salt' => 'your-salt-string',
             'length' => 'your-length-integer',
+            // 'alphabet' => 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890'
         ],
 
         'alternative' => [
             'salt' => 'your-salt-string',
             'length' => 'your-length-integer',
+            // 'alphabet' => 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890'
         ],
 
     ],
