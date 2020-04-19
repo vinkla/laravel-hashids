@@ -108,4 +108,4 @@ For more information on how to use the `Hashids\Hashids` class, check out the do
 
 ## License
 
-[MIT](LICENSE) © [Vincent Klaiber](https://doubledip.se)
+[MIT](LICENSE) © [Vincent Klaiber](https://vinkla.dev/)
