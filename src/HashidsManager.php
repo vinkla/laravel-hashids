@@ -18,10 +18,10 @@ use Hashids\Hashids;
 use Illuminate\Contracts\Config\Repository;
 
 /**
- * @method \Hashids\Hashids encode(mixed ...$numbers)
- * @method \Hashids\Hashids decode(string $hash)
- * @method \Hashids\Hashids encodeHex(string $str)
- * @method \Hashids\Hashids decodeHex(string $hash)
+ * @method string encode(mixed ...$numbers)
+ * @method array decode(string $hash)
+ * @method string encodeHex(string $str)
+ * @method string decodeHex(string $hash)
  */
 class HashidsManager extends AbstractManager
 {
