@@ -15,7 +15,7 @@
     "require": {
         "php": "^7.3 || ^8.0",
         "graham-campbell/manager": "^4.4",
-        "hashids/hashids": "^4.0",
+        "hashids/hashids": "^4.1",
         "illuminate/contracts": "^8.0",
         "illuminate/support": "^8.0"
     },
@@ -31,7 +31,7 @@
     },
     "extra": {
         "branch-alias": {
-            "dev-master": "9.0-dev"
+            "dev-master": "9.1-dev"
         },
         "laravel": {
             "providers": [
