@@ -105,7 +105,3 @@ App::make('Foo')->bar();
 ```
 
 For more information on how to use the `Hashids\Hashids` class, check out the docs at [`hashids/hashids`](https://github.com/vinkla/hashids.php).
-
-## License
-
-[MIT](LICENSE) © [Vincent Klaiber](https://vinkla.dev/)
