@@ -18,7 +18,7 @@ use Vinkla\Hashids\HashidsServiceProvider;
 
 abstract class AbstractTestCase extends AbstractPackageTestCase
 {
-    protected function getServiceProviderClass($app)
+    protected function getServiceProviderClass()
     {
         return HashidsServiceProvider::class;
     }
