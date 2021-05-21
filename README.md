@@ -105,3 +105,47 @@ App::make('Foo')->bar();
 ```
 
 For more information on how to use the `Hashids\Hashids` class, check out the docs at [`hashids/hashids`](https://github.com/vinkla/hashids.php).
+
+### Route Model Binding Usage
+
+Add `Hashidable` trait into your model. It will prepend your salt with the model's class name to ensure different hashids for each model.
+
+```php
+class FooModel extends \Illuminate\Database\Eloquent\Model
+{
+    use \Vinkla\Hashids\Traits\Hashidable;
+}
+```
+
+Laravel can now automatically resolve it from your URL:
+
+```PHP
+class FooController 
+{
+    public function show(FooModel $foo)
+    {
+    }
+}
+```
+
+Use it in your resources:
+
+```PHP
+class FooResource extends \Illuminate\Http\Resources\Json\JsonResource
+{
+    public function toArray($request)
+    {
+        return [
+            'id' => $this->getRouteKey(),
+        ];
+    }
+}
+```
+
+Static methods to work with hashIds:
+
+```PHP
+FooModel::encodeHashId($id);
+FooModel::findByHashId($hashId);
+FooModel::decodeHashId($hashId);
+```
