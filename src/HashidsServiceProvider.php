@@ -78,9 +78,6 @@ class HashidsServiceProvider extends ServiceProvider
         $this->app->alias('hashids.connection', Hashids::class);
     }
 
-    /**
-     * @return string[]
-     */
     public function provides(): array
     {
         return [

@@ -1,11 +1,11 @@
 {
     "name": "vinkla/hashids",
     "description": "A Hashids bridge for Laravel",
+    "license": "MIT",
     "keywords": [
         "hashids",
         "laravel"
     ],
-    "license": "MIT",
     "authors": [
         {
             "name": "Vincent Klaiber",
@@ -13,7 +13,7 @@
         }
     ],
     "require": {
-        "php": "^7.3 || ^8.0",
+        "php": "^8.0",
         "graham-campbell/manager": "^4.4",
         "hashids/hashids": "^4.1",
         "illuminate/contracts": "^8.0",
@@ -26,22 +26,8 @@
         "phpunit/phpunit": "^9.3",
         "squizlabs/php_codesniffer": "^3.5"
     },
-    "config": {
-        "preferred-install": "dist"
-    },
-    "extra": {
-        "branch-alias": {
-            "dev-master": "9.1-dev"
-        },
-        "laravel": {
-            "providers": [
-                "Vinkla\\Hashids\\HashidsServiceProvider"
-            ],
-            "aliases": {
-                "Hashids": "Vinkla\\Hashids\\Facades\\Hashids"
-            }
-        }
-    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
     "autoload": {
         "psr-4": {
             "Vinkla\\Hashids\\": "src/"
@@ -52,6 +38,20 @@
             "Vinkla\\Tests\\Hashids\\": "tests/"
         }
     },
-    "minimum-stability": "dev",
-    "prefer-stable": true
+    "config": {
+        "preferred-install": "dist"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "10.0-dev"
+        },
+        "laravel": {
+            "aliases": {
+                "Hashids": "Vinkla\\Hashids\\Facades\\Hashids"
+            },
+            "providers": [
+                "Vinkla\\Hashids\\HashidsServiceProvider"
+            ]
+        }
+    }
 }
