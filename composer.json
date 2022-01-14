@@ -16,8 +16,8 @@
         "php": "^8.0",
         "graham-campbell/manager": "^4.4",
         "hashids/hashids": "^4.1",
-        "illuminate/contracts": "^8.0",
-        "illuminate/support": "^8.0"
+        "illuminate/contracts": "^8.0||^9.0",
+        "illuminate/support": "^8.0||^9.0"
     },
     "require-dev": {
         "graham-campbell/analyzer": "^3.0",
