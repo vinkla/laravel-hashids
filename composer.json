@@ -22,14 +22,14 @@
         }
     ],
     "require": {
-        "php": "^7.2",
-        "graham-campbell/manager": "^4.3",
+        "php": "^8.0",
+        "graham-campbell/manager": "^4.6",
         "hashids/hashids": "^4.0",
         "illuminate/contracts": "^6.0",
         "illuminate/support": "^6.0"
     },
     "require-dev": {
-        "graham-campbell/analyzer": "^2.3",
+        "graham-campbell/analyzer": "^3.0",
         "graham-campbell/testbench": "^5.3",
         "mockery/mockery": "^1.2",
         "phpunit/phpunit": "^8.0"
