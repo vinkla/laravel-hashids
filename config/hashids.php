@@ -38,8 +38,8 @@ return [
     'connections' => [
 
         'main' => [
-            'salt' => 'your-salt-string',
-            'length' => 'your-length-integer',
+            'salt' => '',
+            'length' => 0,
             // 'alphabet' => 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890'
         ],
 
