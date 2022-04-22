@@ -97,11 +97,11 @@ class Foo
 
     public function bar($id)
     {
-        $this->hashids->encode($id)
+        return $this->hashids->encode($id)
     }
 }
 
-App::make('Foo')->bar();
+App::make('Foo')->bar($id);
 ```
 
 For more information on how to use the `Hashids\Hashids` class, check out the docs at [`hashids/hashids`](https://github.com/vinkla/hashids.php).
