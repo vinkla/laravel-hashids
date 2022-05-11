@@ -97,7 +97,7 @@ class Foo
 
     public function bar($id)
     {
-        $this->hashids->encode($id)
+        $this->hashids->encode($id);
     }
 }
 
