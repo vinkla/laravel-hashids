@@ -31,7 +31,7 @@ class HashidsServiceProvider extends ServiceProvider
         $source = realpath($raw = __DIR__ . '/../config/hashids.php') ?: $raw;
 
         if ($this->app instanceof LaravelApplication && $this->app->runningInConsole()) {
-            $this->publishes([$source => config_path('hashids.php')]);
+            $this->publishes([$source => config_path('hashids.php')], 'hashids-config');
         } elseif ($this->app instanceof LumenApplication) {
             $this->app->configure('hashids');
         }
