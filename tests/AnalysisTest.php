@@ -21,7 +21,7 @@ class AnalysisTest extends TestCase
 {
     use AnalysisTrait;
 
-    protected function getPaths()
+    protected static function getPaths(): array
     {
         return [
             realpath(__DIR__ . '/../config'),
@@ -30,7 +30,7 @@ class AnalysisTest extends TestCase
         ];
     }
 
-    protected function getIgnored()
+    protected function getIgnored(): array
     {
         return [Application::class];
     }

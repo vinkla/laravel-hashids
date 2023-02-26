@@ -22,17 +22,17 @@ class ServiceProviderTest extends AbstractTestCase
 {
     use ServiceProviderTrait;
 
-    public function testHashidsFactoryIsInjectable()
+    public function testHashidsFactoryIsInjectable(): void
     {
         $this->assertIsInjectable(HashidsFactory::class);
     }
 
-    public function testHashidsManagerIsInjectable()
+    public function testHashidsManagerIsInjectable(): void
     {
         $this->assertIsInjectable(HashidsManager::class);
     }
 
-    public function testBindings()
+    public function testBindings(): void
     {
         $this->assertIsInjectable(Hashids::class);
 

@@ -18,20 +18,20 @@ use Vinkla\Hashids\HashidsFactory;
 
 class HashidsFactoryTest extends AbstractTestCase
 {
-    public function testMakeStandard()
+    public function testMakeStandard(): void
     {
         $factory = $this->getHashidsFactory();
 
         $return = $factory->make([
             'salt' => 'your-salt-string',
-            'length' => 'your-length-integer',
+            'length' => 0,
             'alphabet' => 'your-alphabet-string',
         ]);
 
         $this->assertInstanceOf(Hashids::class, $return);
     }
 
-    protected function getHashidsFactory()
+    protected function getHashidsFactory(): HashidsFactory
     {
         return new HashidsFactory();
     }
