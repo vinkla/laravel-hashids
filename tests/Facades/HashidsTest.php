@@ -22,17 +22,17 @@ class HashidsTest extends AbstractTestCase
 {
     use FacadeTrait;
 
-    protected function getFacadeAccessor()
+    protected static function getFacadeAccessor(): string
     {
         return 'hashids';
     }
 
-    protected function getFacadeClass()
+    protected static function getFacadeClass(): string
     {
         return Hashids::class;
     }
 
-    protected function getFacadeRoot()
+    protected static function getFacadeRoot(): string
     {
         return HashidsManager::class;
     }

@@ -22,7 +22,7 @@ use Vinkla\Hashids\HashidsManager;
 
 class HashidsManagerTest extends AbstractTestBenchTestCase
 {
-    public function testCreateConnection()
+    public function testCreateConnection(): void
     {
         $config = ['path' => __DIR__];
 
@@ -40,7 +40,7 @@ class HashidsManagerTest extends AbstractTestBenchTestCase
         $this->assertArrayHasKey('hashids', $manager->getConnections());
     }
 
-    protected function getManager(array $config)
+    protected function getManager(array $config): HashidsManager
     {
         $repository = Mockery::mock(Repository::class);
         $factory = Mockery::mock(HashidsFactory::class);
