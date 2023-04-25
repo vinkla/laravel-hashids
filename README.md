@@ -1,4 +1,4 @@
-![hashids](https://cloud.githubusercontent.com/assets/499192/11159205/faa429ae-8a5d-11e5-8c5d-c60a89290c5e.png)
+![Hashids](https://hashids.org/public/img/hashids.gif)
 
 # Laravel Hashids
 
