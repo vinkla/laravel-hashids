@@ -14,7 +14,6 @@ declare(strict_types=1);
 namespace Vinkla\Tests\Hashids;
 
 use GrahamCampbell\Analyzer\AnalysisTrait;
-use Laravel\Lumen\Application;
 use PHPUnit\Framework\TestCase;
 
 class AnalysisTest extends TestCase
@@ -28,10 +27,5 @@ class AnalysisTest extends TestCase
             realpath(__DIR__ . '/../src'),
             realpath(__DIR__),
         ];
-    }
-
-    protected function getIgnored(): array
-    {
-        return [Application::class];
     }
 }
