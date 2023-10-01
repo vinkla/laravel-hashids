@@ -15,9 +15,7 @@ namespace Vinkla\Hashids;
 
 use Hashids\Hashids;
 use Illuminate\Contracts\Container\Container;
-use Illuminate\Foundation\Application as LaravelApplication;
 use Illuminate\Support\ServiceProvider;
-use Laravel\Lumen\Application as LumenApplication;
 
 class HashidsServiceProvider extends ServiceProvider
 {
@@ -30,11 +28,7 @@ class HashidsServiceProvider extends ServiceProvider
     {
         $source = realpath($raw = __DIR__ . '/../config/hashids.php') ?: $raw;
 
-        if ($this->app instanceof LaravelApplication && $this->app->runningInConsole()) {
-            $this->publishes([$source => config_path('hashids.php')]);
-        } elseif ($this->app instanceof LumenApplication) {
-            $this->app->configure('hashids');
-        }
+        $this->publishes([$source => config_path('hashids.php')]);
 
         $this->mergeConfigFrom($source, 'hashids');
     }
