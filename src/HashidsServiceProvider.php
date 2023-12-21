@@ -16,12 +16,32 @@ namespace Vinkla\Hashids;
 use Hashids\Hashids;
 use Illuminate\Contracts\Container\Container;
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Database\Schema\Blueprint;
 
 class HashidsServiceProvider extends ServiceProvider
 {
     public function boot(): void
     {
         $this->setupConfig();
+
+        $this->defineHashIdField();
+    }
+
+    private function defineHashIdField()
+    {
+        Blueprint::macro("hashId", function($name = null) {
+            /**
+             * @var \Illuminate\Database\Schema\Blueprint $this
+             */
+            return $this->string($name ?? config('hashids.hash_id_field'));
+        });
+        
+        Blueprint::macro("dropHashId", function($name = null) {
+            /**
+             * @var \Illuminate\Database\Schema\Blueprint $this
+             */
+            return $this->dropColumn($name ?? config('hashids.hash_id_field'));
+        });
     }
 
     protected function setupConfig(): void

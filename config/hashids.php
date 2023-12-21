@@ -42,4 +42,6 @@ return [
 
     ],
 
+    'hash_id_field' => 'hash_id',
+
 ];

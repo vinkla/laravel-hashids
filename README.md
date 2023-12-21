@@ -104,4 +104,19 @@ class Foo
 App::make('Foo')->bar();
 ```
 
+If you would like your models to automatically store hashIds while saving:
+
+```php
+use Vinkla\Hashids\Traits\UsesHashId
+
+class Post extends Model
+{
+    use HashId;
+}
+```
+
+Now when `Post` is saved, a hashId is also stored in the `hash_id` field in the database. You can update this field name in `hashids.hash_id_field` config.
+
+To defined a field to store this in the DB, you could use `$table->hashId()` in your migration (or `$table->dropHashId()` to drop the column).
+
 For more information on how to use the `Hashids\Hashids` class, check out the docs at [`hashids/hashids`](https://github.com/vinkla/hashids.php).
