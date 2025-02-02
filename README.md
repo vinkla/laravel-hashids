@@ -24,7 +24,7 @@ $hashidsManager->encode(911);
 </a>
 
 > [!NOTE]
-> The creator of Hashids has released a new, upgraded version rebranded as **Sqids**. However, Hashids will continue to be maintained and available for future use. For more information, please visit the [Sqids repository](https://github.com/sqids/sqids-php) and learn how it compares to Hashids on the [Sqids website](https://sqids.org/faq#hashids). <ins>The API is so simple that you don't even need a Laravel package for it.</ins>
+> The creator of Hashids has released a new, upgraded version rebranded as **Sqids**. However, Hashids will continue to be maintained and available for future use. For more information, please visit the [Sqids repository](https://github.com/sqids/sqids-php) and learn how it compares to Hashids on the [Sqids website](https://sqids.org/faq#hashids). **The API is so simple that you don't need a Laravel package at all.**
 
 ## Installation
 
