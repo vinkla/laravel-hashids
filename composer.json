@@ -20,7 +20,7 @@
         "illuminate/support": "^11.0"
     },
     "require-dev": {
-        "graham-campbell/analyzer": "^4.1",
+        "graham-campbell/analyzer": "^5.0",
         "graham-campbell/testbench": "^6.1",
         "mockery/mockery": "^1.6.6",
         "phpunit/phpunit": "^11.5"
