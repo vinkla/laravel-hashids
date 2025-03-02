@@ -41,9 +41,6 @@
         "preferred-install": "dist"
     },
     "extra": {
-        "branch-alias": {
-            "dev-master": "12.0-dev"
-        },
         "laravel": {
             "aliases": {
                 "Hashids": "Vinkla\\Hashids\\Facades\\Hashids"
