@@ -15,9 +15,9 @@ Hashids::decode('1LLb3b4ck');
 $hashidsManager->encode(911);
 ```
 
-[![Build Status](https://badgen.net/github/checks/vinkla/laravel-hashids?label=build&icon=github)](https://github.com/vinkla/laravel-hashids/actions)
-[![Monthly Downloads](https://badgen.net/packagist/dm/vinkla/hashids)](https://packagist.org/packages/vinkla/hashids/stats)
-[![Latest Version](https://badgen.net/packagist/v/vinkla/hashids)](https://packagist.org/packages/vinkla/hashids)
+[![Build Status](https://img.shields.io/github/actions/workflow/status/vinkla/laravel-hashids/phpunit.yml?branch=master&label=tests)](https://github.com/vinkla/laravel-hashids/actions)
+[![Monthly Downloads](https://img.shields.io/packagist/dm/vinkla/hashids)](https://packagist.org/packages/vinkla/hashids/stats)
+[![Latest Version](https://img.shields.io/packagist/v/vinkla/hashids)](https://packagist.org/packages/vinkla/hashids)
 
 <a href="https://sqids.org/">
     <img align="right" src="https://github.com/user-attachments/assets/75864e3a-483c-4b6f-9b0b-66f5e3d6e736" alt="Sqids" width="100" height="100">
