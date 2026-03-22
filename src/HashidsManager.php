@@ -25,7 +25,7 @@ use Illuminate\Contracts\Config\Repository;
  */
 class HashidsManager extends AbstractManager
 {
-    protected HashidsFactory $factory;
+    protected readonly HashidsFactory $factory;
 
     public function __construct(Repository $config, HashidsFactory $factory)
     {
