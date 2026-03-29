@@ -111,4 +111,70 @@ class Foo
 App::make('Foo')->bar();
 ```
 
+## Eloquent Model Trait
+
+The `HasHashId` trait provides hash ID support directly on your Eloquent models.
+
+#### Setup
+
+```php
+use Illuminate\Database\Eloquent\Model;
+use Vinkla\Hashids\Concerns\HasHashId;
+
+class Post extends Model
+{
+    use HasHashId;
+}
+```
+
+To use a specific Hashids connection, define a `$connectionHashId` property on the model:
+
+```php
+class Post extends Model
+{
+    use HasHashId;
+
+    protected string $connectionHashId = 'alternative';
+
+    // Or Using the `connectionHashId` method.
+    public function getConnectionHashId(): string
+    {
+        return 'alternative';
+    }
+}
+```
+
+#### Encoding & Decoding
+
+```php
+$post = Post::find(1);
+
+// Get the hash ID for a model instance.
+$post->getHashId(); // "jR"
+
+// Access it as an attribute. when added to `$appends` property.
+protected $appends = ['hash_id'];  // in model class
+
+$post->hash_id; // "jR" 
+
+// Decode a hash ID back to its original value.
+Post::decodeHashId('jR'); // 1
+
+// Find a model by its hash ID.
+$post = Post::findByHashId('jR'); // Post instance or null
+```
+
+#### Query Scope
+
+Use `whereHashIds` to query models by one or more hash IDs:
+
+```php
+// Single hash ID.
+Post::query()->whereHashIds('jR')->first();
+
+// Multiple hash IDs (array or Collection).
+Post::query()->whereHashIds(['jR', 'oZ'])->get();
+Post::query()->whereHashIds(collect(['jR', 'oZ']))->get();
+```
+
 For more information on how to use the `Hashids\Hashids` class, check out the docs at [`hashids/hashids`](https://github.com/vinkla/hashids.php).
